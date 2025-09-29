@@ -35,14 +35,14 @@ const EventsPage = () => {
           <h1 className="text-center font-english text-5xl! text-[#c4a882] underline">
             Events
           </h1>
-          <section className="flex flex-col gap-4">
+          <section className="flex flex-col gap-4 pt-2 border-t-2 border-[#c4a882]">
             <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
               5 <sup>th</sup> March
             </h2>
 
             <div className="h-48 w-full flex items-center justify-evenly my-4">
               <Image height={140} width={140} src={mehendi} alt="mehendi" />
-              <div className="lg:w-96 md:w-80 w-44 text-xs">
+              <div className="lg:w-96 md:w-80 w-44 text-sm">
                 <p className="font-alice text-2xl text-center text-[#c4a882]">
                   MEHENDI CEREMONY
                 </p>
@@ -54,7 +54,7 @@ const EventsPage = () => {
               </div>
             </div>
             <div className="h-48 w-full flex items-center justify-evenly my-4">
-              <div className="lg:w-96 md:w-80 w-44 text-xs">
+              <div className="lg:w-96 md:w-80 w-44 text-sm">
                 <p className="font-alice text-2xl text-center text-[#c4a882]">
                   SANGEET CEREMONY
                 </p>
@@ -67,76 +67,72 @@ const EventsPage = () => {
             </div>
           </section>
 
-          <section className="flex flex-col gap-4">
+          <section className="flex flex-col gap-4 border-t-2 pt-2 border-[#c4a882]">
             <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
               6<sup>th</sup> March
             </h2>
 
             <div className="h-48 w-full flex items-center justify-evenly my-4">
               <Image height={140} width={140} src={haldi} alt="haldi" />
-              <div className="lg:w-96 md:w-80 w-44 text-xs">
+              <div className="lg:w-96 md:w-80 w-44 text-sm">
                 <p className="font-alice text-2xl text-center text-[#c4a882]">
                   HALDI CEREMONY
                 </p>
                 <p className="font-alice">
                   where a turmeric paste is applied to the bride and groom for
                   purification and to bless the couple with a happy start to
-                  their married life, symbolizing a joyous and auspicious
-                  beginning to their journey together
+                  their married life
                 </p>
               </div>
             </div>
             <div className="h-48 w-full flex items-center justify-evenly my-4">
-              <div className="lg:w-96 md:w-80 w-44 text-xs">
+              <div className="lg:w-96 md:w-80 w-44 text-sm">
                 <p className="font-alice text-2xl text-center text-[#c4a882]">
                   BARAAT CEREMONY
                 </p>
                 <p className="font-alice">
                   a vibrant and celebratory procession led by the groom and his
                   family, dancing and singing with music to the wedding venue.
-                  This pre-wedding ritual symbolizes the groom&apos;s joyful
-                  journey to marry the bride
                 </p>
               </div>
               <Image height={140} width={140} src={baraat} alt="baraat" />
             </div>
             <div className="h-48 w-full flex items-center justify-evenly my-4">
               <Image height={140} width={140} src={jaimala} alt="jaimala" />
-              <div className="lg:w-96 md:w-80 w-44 text-xs">
+              <div className="lg:w-96 md:w-80 w-44 text-sm">
                 <p className="font-alice text-2xl text-center text-[#c4a882]">
                   JAIMALA CEREMONY
                 </p>
                 <p className="font-alice">
                   ritual where the bride and groom garland each other,
                   symbolizing mutual acceptance and the official beginning of
-                  their journey as a couple. This ancient and celebratory
-                  tradition is filled with pomp and joy as family and guests
-                  witness the couple&apos;s public declaration of love and
-                  commitment.
+                  their journey as a couple.
                 </p>
               </div>
             </div>
             <div className="h-48 w-full flex items-center justify-evenly my-4">
-              <div className="lg:w-96 md:w-80 w-44 text-xs">
+              <div className="lg:w-96 md:w-80 w-44 text-sm">
                 <p className="font-alice text-2xl text-center text-[#c4a882]">
                   PHERAS CEREMONY
                 </p>
-                <p className="text-alice">
+                <p className="font-alice">
                   where the bride and groom circle a sacred fire, exchanging
                   vows and making seven solemn promises for their life together.
-                  Each round, or &quot;phera&quot; is a prayer for different
-                  aspects of a successful marriage, such as nourishment,
-                  strength, prosperity, loyalty, and eternal companionship.
                 </p>
               </div>
-
               <Image height={140} width={140} src={pheras} alt="pheras" />
             </div>
             <div className="h-48 w-full flex items-center justify-evenly my-4">
               <Image height={140} width={140} src={reception} alt="reception" />
-              <p className="font-alice text-2xl text-center text-[#c4a882]">
-                RECEPTION & AFTER PARTY
-              </p>
+              <div className="lg:w-96 md:w-80 w-44 text-sm">
+                <p className="font-alice text-2xl text-center text-[#c4a882]">
+                  RECEPTION & AFTER PARTY
+                </p>
+                <p className="font-alice">
+                  It's a joyous occasion where friends and family can express
+                  their love and well wishes for the couple's life together.
+                </p>
+              </div>
             </div>
           </section>
         </div>

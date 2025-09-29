@@ -6,12 +6,20 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// pls adjust order of the website so easier for people to rsvp
+// - Welcome
+// - Events
+// - ⁠RSVP
+// - ⁠Our story
+// - ⁠Essentials
+// - ⁠FAQs
+
 const navigationItems = [
   { name: "WELCOME", href: "/welcome" },
-  { name: "OUR STORY", href: "/our-story" },
   { name: "EVENTS", href: "/events" },
-  { name: "WED ESSENTIALS", href: "/wed-essentials" },
   { name: "RSVP", href: "/rsvp2" },
+  { name: "OUR STORY", href: "/our-story" },
+  { name: "WED ESSENTIALS", href: "/wed-essentials" },
   { name: "FAQs", href: "/faqs" },
 ];
 

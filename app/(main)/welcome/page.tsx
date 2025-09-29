@@ -84,13 +84,13 @@ export default function WelcomePage() {
                 </div>
                 {/* Footer + Button */}
                 <div className="lg:flex hidden flex-col items-center gap-4 mt-8">
-                  <Link href="/our-story">
+                  <Link href="/events">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center gap-2 bg-[#c4a882] text-[#FFE8DB] px-6 py-3 rounded-full shadow-lg text-sm md:text-base font-playfair tracking-wide transition-all duration-300"
                     >
-                      Our Story
+                      Events
                       <motion.span
                         animate={{ x: [0, 6, 0] }}
                         transition={{

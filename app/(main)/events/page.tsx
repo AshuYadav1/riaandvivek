@@ -157,7 +157,7 @@ const EventsPage = () => {
               <h2 className="w-full font-alice text-2xl flex justify-center text-[#c4a882]">
                 Checkout
               </h2>
-              <p className=" w-72 text-center mt-2 font-alice">
+              <p className=" w-72 text-center mt-2 mb-4 font-alice">
                 Checkout with memories and photos that last forever
               </p>
             </div>

@@ -153,9 +153,12 @@ const EventsPage = () => {
               <div className="border-t border-black/50 flex-grow max-w-[60px] ml-4"></div>
             </div>
 
-            <div className="w-full">
-              <p className="w-full font-alice text-2xl flex justify-center text-[#c4a882]">
+            <div className="w-full flex flex-col items-center">
+              <h2 className="w-full font-alice text-2xl flex justify-center text-[#c4a882]">
                 Checkout
+              </h2>
+              <p className=" w-72 text-center mt-2 font-alice">
+                Checkout with memories and photos that last forever
               </p>
             </div>
           </section>

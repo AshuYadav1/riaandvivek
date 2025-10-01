@@ -389,7 +389,7 @@ export default function RSVPPage2() {
           </p>
           <p className="font-alice text-gray-200">
             For any queries, feel free to reach out to the Horizon Wie Team{" "}
-            <br /> via riawedsvivek@gmail.com & <br /> (Whatsapp & Call) on +91
+            <br /> via riawedsvivek@gmail.com & <br /> (Whatsapp Or Call) on +91
             9769109082
           </p>
         </motion.div>

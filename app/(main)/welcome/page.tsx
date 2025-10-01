@@ -82,7 +82,7 @@ export default function WelcomePage() {
                     </p>
                   </div>
                   {/* Parents’ Names */}
-                  <div className="text-xs sm:text-sm text-gray-600 font-alice space-y-1">
+                  <div className="text-xs sm:text-sm text-[#c4a882] font-alice space-y-1">
                     <p>
                       <span className="font-medium font-english text-2xl">
                         Madhu &amp; Manish Nagpal

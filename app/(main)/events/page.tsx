@@ -35,13 +35,13 @@ const EventsPage = () => {
           <h1 className="text-center font-english text-5xl! text-[#c4a882] underline">
             Events
           </h1>
-          <section className="flex flex-col gap-4 pt-2 border-t-2 border-[#c4a882]">
+          <section className="flex flex-col gap-4 pt-2">
             <div className="flex items-center justify-center w-full">
-              <div className="border-t border-black/50 flex-grow max-w-[60px] mr-4"></div>
-              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
+              <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] mr-4"></div>
+              <h2 className="text-center font-english text-4xl rounded-b-2xl text-[#c4a882] py-2">
                 5 <sup>th</sup> March
               </h2>
-              <div className="border-t border-black/50 flex-grow max-w-[60px] ml-4"></div>
+              <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] ml-4"></div>
             </div>
 
             <div className="h-48 w-full flex items-center justify-evenly my-4">
@@ -71,13 +71,13 @@ const EventsPage = () => {
             </div>
           </section>
 
-          <section className="flex flex-col gap-4 border-t-2 pt-2 border-[#c4a882]">
+          <section className="flex flex-col gap-4 pt-2">
             <div className="flex items-center justify-center w-full">
-              <div className="border-t border-black/50 flex-grow max-w-[60px] mr-4"></div>
-              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
+              <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] mr-4"></div>
+              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2 text-[#c4a882]">
                 6 <sup>th</sup> March
               </h2>
-              <div className="border-t border-black/50 flex-grow max-w-[60px] ml-4"></div>
+              <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] ml-4"></div>
             </div>
 
             <div className="h-48 w-full flex items-center justify-evenly my-4">
@@ -144,13 +144,13 @@ const EventsPage = () => {
               </div>
             </div>
           </section>
-          <section className="flex flex-col gap-4 border-t-2 pt-2 border-[#c4a882] mb-6">
+          <section className="flex flex-col gap-4 mb-6">
             <div className="flex items-center justify-center w-full">
-              <div className="border-t border-black/50 flex-grow max-w-[60px] mr-4"></div>
-              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
+              <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] mr-4"></div>
+              <h2 className="text-center font-english text-4xl text-[#c4a882] rounded-b-2xl py-2">
                 7 <sup>th</sup> March
               </h2>
-              <div className="border-t border-black/50 flex-grow max-w-[60px] ml-4"></div>
+              <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] ml-4"></div>
             </div>
 
             <div className="w-full flex flex-col items-center">

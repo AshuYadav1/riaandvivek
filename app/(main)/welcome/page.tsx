@@ -82,16 +82,14 @@ export default function WelcomePage() {
                     </p>
                   </div>
                   {/* Parents’ Names */}
-                  <div className="mt-6 text-xs sm:text-sm text-gray-600 font-alice space-y-1">
+                  <div className="text-xs sm:text-sm text-gray-600 font-alice space-y-1">
                     <p>
-                      Ria&apos;s Parents –{" "}
-                      <span className="font-medium">
+                      <span className="font-medium font-english text-2xl">
                         Madhu &amp; Manish Nagpal
                       </span>
                     </p>
                     <p>
-                      Vivek&apos;s Parents –{" "}
-                      <span className="font-medium">
+                      <span className="font-medium font-english text-2xl">
                         Asmita &amp; Mukul Gandhi
                       </span>
                     </p>

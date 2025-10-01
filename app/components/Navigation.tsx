@@ -241,7 +241,7 @@ export default function Navigation() {
                       onClick={() => setIsOpen(false)}
                       className={`block py-4 text-center tracking-wider text-sm ${
                         pathname === item.href
-                          ? "text-amber-700 font-medium border-b-2"
+                          ? "text-amber-700 font-medium"
                           : "text-gray-800 hover:text-amber-600"
                       }`}
                     >

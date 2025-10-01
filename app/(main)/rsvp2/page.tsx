@@ -240,7 +240,7 @@ export default function RSVPPage2() {
     );
 
   return (
-    <div className="relative bg-white min-h-screen overflow-x-hidden pt-[12%] bg-[url('/Proposal.jpg')] bg-center bg-no-repeat bg-cover">
+    <div className="relative bg-white min-h-screen overflow-x-hidden pt-[12%] bg-[url('/RSiViP.jpg')] bg-center bg-no-repeat bg-cover">
       <div className="absolute inset-0 bg-black/70"></div>
 
       <Navigation />
@@ -374,15 +374,25 @@ export default function RSVPPage2() {
             </motion.form>
           </>
         )}
-        <motion.p
+        <motion.div
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
           className="text-center text-white font-alice mt-6 sm:mt-8 text-sm sm:text-base"
         >
-          Kindly RSVP by <span className="font-semibold">15th October</span>.
-        </motion.p>
+          <p className="mb-4">
+            Kindly RSVP by{" "}
+            <span className="font-semibold">
+              {" "}
+              15<sup>th</sup> oct - 26<sup>th</sup> oct
+            </span>
+          </p>
+          <p className="font-alice text-gray-200">
+            For any queries, feel free to reach out to the Horizon Wie Team via
+            riawedsvivek@gmail.com & (Whatsapp & Call) on +91 9769109082
+          </p>
+        </motion.div>
       </motion.div>
     </div>
   );

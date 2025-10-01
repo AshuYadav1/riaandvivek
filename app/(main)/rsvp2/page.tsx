@@ -65,7 +65,7 @@ export default function RSVPPage2() {
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="text-[#5a4b2d] text-center mb-6 sm:mb-8 md:mb-10 text-2xl sm:text-4xl md:text-5xl font-trajanpro"
+          className="text-white text-center mb-6 sm:mb-8 md:mb-10 text-2xl sm:text-4xl md:text-5xl font-trajanpro"
           style={{ marginTop: "6rem", fontSize: "2rem " }}
         >
           RSiViP
@@ -94,7 +94,7 @@ export default function RSVPPage2() {
                   onChange={handleChange}
                   placeholder={field.placeholder}
                   required
-                  className="w-full bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-0 focus:border-[#5a4b2d] placeholder-gray-500 py-2 sm:py-3 text-[#5a4b2d] font-alice"
+                  className="w-full bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-0 focus:border-[#5a4b2d] placeholder-gray-100 py-2 sm:py-3 text-white font-alice"
                 />
               </motion.div>
             );
@@ -108,7 +108,7 @@ export default function RSVPPage2() {
             }}
             className="mt-4 sm:mt-6"
           >
-            <p className="text-sm font-medium text-[#5a4b2d] mb-2 sm:mb-3 font-alice">
+            <p className="text-sm font-medium text-white mb-2 sm:mb-3 font-alice">
               Attending the wedding
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -123,12 +123,10 @@ export default function RSVPPage2() {
                     value={option}
                     checked={formData.attending === option}
                     onChange={handleChange}
-                    className="text-[#5a4b2d] focus:ring-[#d6c7a1]"
+                    className="text-white focus:ring-[#d6c7a1]"
                     required
                   />
-                  <span className="ml-2 text-[#5a4b2d] font-alice">
-                    {option}
-                  </span>
+                  <span className="ml-2 text-white font-alice">{option}</span>
                 </label>
               ))}
             </div>
@@ -145,7 +143,7 @@ export default function RSVPPage2() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full bg-[#5a4b2d] text-white py-2 sm:py-3 rounded-lg font-medium font-trajanpro hover:bg-[#d6c7a1] hover:text-[#5a4b2d] transition"
+              className="w-full bg-[#5a4b2d] text-white py-2 sm:py-3 rounded-lg font-medium font-trajanpro hover:bg-[#d6c7a1] hover:text-white transition"
             >
               Submit RSVP
             </motion.button>
@@ -157,7 +155,7 @@ export default function RSVPPage2() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="text-center text-[#5a4b2d] font-alice mt-6 sm:mt-8 text-sm sm:text-base"
+            className="text-center text-white font-alice mt-6 sm:mt-8 text-sm sm:text-base"
           >
             Kindly RSVP by <span className="font-semibold">15th October</span>.
           </motion.p>

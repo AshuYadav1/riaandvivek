@@ -36,9 +36,13 @@ const EventsPage = () => {
             Events
           </h1>
           <section className="flex flex-col gap-4 pt-2 border-t-2 border-[#c4a882]">
-            <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
-              5 <sup>th</sup> March
-            </h2>
+            <div className="flex items-center justify-center w-full">
+              <div className="border-t border-black/50 flex-grow max-w-[60px] mr-4"></div>
+              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
+                5 <sup>th</sup> March
+              </h2>
+              <div className="border-t border-black/50 flex-grow max-w-[60px] ml-4"></div>
+            </div>
 
             <div className="h-48 w-full flex items-center justify-evenly my-4">
               <Image height={140} width={140} src={mehendi} alt="mehendi" />
@@ -68,9 +72,13 @@ const EventsPage = () => {
           </section>
 
           <section className="flex flex-col gap-4 border-t-2 pt-2 border-[#c4a882]">
-            <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
-              6<sup>th</sup> March
-            </h2>
+            <div className="flex items-center justify-center w-full">
+              <div className="border-t border-black/50 flex-grow max-w-[60px] mr-4"></div>
+              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
+                6 <sup>th</sup> March
+              </h2>
+              <div className="border-t border-black/50 flex-grow max-w-[60px] ml-4"></div>
+            </div>
 
             <div className="h-48 w-full flex items-center justify-evenly my-4">
               <Image height={140} width={140} src={haldi} alt="haldi" />
@@ -134,6 +142,21 @@ const EventsPage = () => {
                   together.
                 </p>
               </div>
+            </div>
+          </section>
+          <section className="flex flex-col gap-4 border-t-2 pt-2 border-[#c4a882] mb-6">
+            <div className="flex items-center justify-center w-full">
+              <div className="border-t border-black/50 flex-grow max-w-[60px] mr-4"></div>
+              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2">
+                7 <sup>th</sup> March
+              </h2>
+              <div className="border-t border-black/50 flex-grow max-w-[60px] ml-4"></div>
+            </div>
+
+            <div className="w-full">
+              <p className="w-full font-alice text-2xl flex justify-center text-[#c4a882]">
+                Checkout
+              </p>
             </div>
           </section>
         </div>

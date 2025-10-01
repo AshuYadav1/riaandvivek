@@ -273,6 +273,12 @@ export default function FAQPage() {
           </div>
         </div>
       </div>
+      <div className="mb-10">
+        <p className="text-center">
+          For any queries, feel free to reach out to the Horizon Team via
+          riawedsvivek@gmail.com , +91 95****324, or Whatsapp
+        </p>
+      </div>
     </div>
   );
 }

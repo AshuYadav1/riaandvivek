@@ -17,7 +17,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navigationItems = [
   { name: "WELCOME", href: "/welcome" },
   { name: "EVENTS", href: "/events" },
-  { name: "RiSiVP", href: "/rsvp2" },
+  { name: "RiViSP", href: "/rsvp2" },
   { name: "OUR STORY", href: "/our-story" },
   { name: "FAQs", href: "/faqs" },
 ];

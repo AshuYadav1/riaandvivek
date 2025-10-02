@@ -65,7 +65,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`${
                   pathname === item.href && "border-b-2"
-                } text-xs lg:text-sm tracking-wider transition-colors hover:text-amber-900 ${
+                } text-xs lg:text-sm tracking-wider transition-colors hover:text-amber-900 font-trajanpro ${
                   pathname === item.href
                     ? "text-amber-900 font-medium"
                     : "text-amber-800"
@@ -152,7 +152,7 @@ export default function Navigation() {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`block py-4 text-center tracking-wider text-sm ${
+                      className={`block py-4 text-center tracking-wider text-sm font-trajanpro ${
                         pathname === item.href
                           ? "text-amber-700 font-medium"
                           : "text-gray-800 hover:text-amber-600"
@@ -233,7 +233,7 @@ export default function Navigation() {
               className="fixed top-[10vh] left-0 right-0 bottom-0 z-40 bg-white overflow-y-auto"
             >
               <div className="p-6">
-                <nav className="flex flex-col divide-y divide-gray-200">
+                <nav className="flex flex-col divide-y divide-gray-200 font-trajanpro">
                   {navigationItems.map((item) => (
                     <Link
                       key={item.name}

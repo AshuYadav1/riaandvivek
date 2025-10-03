@@ -154,11 +154,6 @@ const faqs = [
       "For any allergies or dietary preferences, please inform the Horizon WIE team so we can make the necessary arrangements.",
   },
   {
-    question: "What is the check in and check out time for hotel?",
-    answer:
-      "The checkin and checkout time for hotel is 3pm and 12pm respectively.",
-  },
-  {
     question: "How can I contact the couple or wedding organizers?",
     answer:
       "For any queries, feel free to reach out to the Horizon Wie Team via riawedsvivek@gmail.com & (Whatsapp & Call) on +91 9769109082",

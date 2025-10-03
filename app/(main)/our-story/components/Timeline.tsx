@@ -1,8 +1,8 @@
 "use client";
 
-import { AnimatePresence, delay, motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
 import Image from "next/image";
 import { FaHeart } from "react-icons/fa6";
@@ -32,7 +32,7 @@ const heartVarients = {
 
 export default function Timeline({
   stories,
-  setCurrentStory,
+  // setCurrentStory,
   setIsModalOpen,
 }: {
   stories: {
@@ -42,7 +42,7 @@ export default function Timeline({
     content: string;
     positon: string;
   }[];
-  setCurrentStory: Dispatch<SetStateAction<number>>;
+  // setCurrentStory: Dispatch<SetStateAction<number>>;
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
@@ -51,7 +51,7 @@ export default function Timeline({
         <p className="bg-white px-10 rounded-b-3xl">Our Love Story</p>
       </h1>
       <div>
-        {stories.map(({ title, image, date, content, positon }, index) => (
+        {stories.map(({ title, image, date, content, positon }) => (
           <AnimatedEntry
             key={image}
             side={positon}
@@ -59,8 +59,8 @@ export default function Timeline({
             date={date}
             title={title}
             content={content}
-            setCurrentStory={setCurrentStory}
-            index={index}
+            // setCurrentStory={setCurrentStory}
+            // index={index}
             setIsModalOpen={setIsModalOpen}
           />
         ))}
@@ -78,8 +78,8 @@ function AnimatedEntry({
   image,
   date,
   content,
-  index,
-  setCurrentStory,
+  // index,
+  // setCurrentStory,
   setIsModalOpen,
 }: {
   side: string;
@@ -87,8 +87,8 @@ function AnimatedEntry({
   image: string;
   date: string;
   content: string;
-  index: number;
-  setCurrentStory: Dispatch<SetStateAction<number>>;
+  // index: number;
+  // setCurrentStory: Dispatch<SetStateAction<number>>;
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   const controls = useAnimation();
@@ -141,7 +141,7 @@ function AnimatedEntry({
                 className="mb-4 sm:mb-6 relative cursor-pointer"
                 onClick={() => {
                   setIsModalOpen(true);
-                  setCurrentStory(index);
+                  // setCurrentStory(index);
                 }}
               >
                 <AnimatePresence mode="wait">
@@ -182,7 +182,7 @@ function AnimatedEntry({
                 className="mb-4 sm:mb-6 relative cursor-pointer"
                 onClick={() => {
                   setIsModalOpen(true);
-                  setCurrentStory(index);
+                  // setCurrentStory(index);
                 }}
               >
                 <AnimatePresence mode="wait">

@@ -1,5 +1,4 @@
 import type React from "react";
-import Navigation from "@/app/components/Navigation";
 
 export default function SiteLayout({
   children,

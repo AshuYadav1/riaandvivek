@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Navigation from "@/app/components/Navigation";
-import axios from "axios";
 
 export default function RSVPPage() {
   const [formData, setFormData] = useState({

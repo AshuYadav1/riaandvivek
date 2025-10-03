@@ -5,16 +5,10 @@ import { Dispatch, SetStateAction } from "react";
 const StoryCard = ({
   image,
   title,
-  content,
-  date,
-  index,
   setIsModalOpen,
 }: {
   image: string;
   title: string;
-  date: string;
-  content: string;
-  index: number;
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (

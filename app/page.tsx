@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import SmartCalendarButton from "@/app/components/SmartCalendarButton";
 import Image from "next/image";
 
 export default function WelcomePage() {

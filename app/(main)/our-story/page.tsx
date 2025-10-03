@@ -7,7 +7,7 @@ import Navigation from "../../components/Navigation";
 import Timeline from "./components/Timeline";
 
 export default function OurStoryPage() {
-  const [currentStory, setCurrentStory] = useState(0);
+  // const [currentStory, setCurrentStory] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -186,7 +186,7 @@ export default function OurStoryPage() {
 
             <Timeline
               stories={stories}
-              setCurrentStory={setCurrentStory}
+              // setCurrentStory={setCurrentStory}
               setIsModalOpen={setIsModalOpen}
             />
 

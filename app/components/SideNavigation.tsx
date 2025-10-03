@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 interface SideNavigationProps {
@@ -18,14 +18,15 @@ export default function SideNavigation({
   onNextStory,
 }: SideNavigationProps) {
   const pathname = usePathname();
-  const router = useRouter();
+  // const router = useRouter();
 
   const isStoryPage = pathname === "/our-story";
 
   const handlePrevious = () => {
     if (isStoryPage && onPreviousStory) {
       onPreviousStory();
-    }};
+    }
+  };
 
   const handleNext = () => {
     if (isStoryPage && onNextStory) {
@@ -33,16 +34,16 @@ export default function SideNavigation({
     }
   };
 
-const canGoPrevious = isStoryPage
-  ? currentStory !== undefined && currentStory !== 0
-  : currentStory !== undefined && currentStory > 0;
+  const canGoPrevious = isStoryPage
+    ? currentStory !== undefined && currentStory !== 0
+    : currentStory !== undefined && currentStory > 0;
 
   const canGoNext = isStoryPage
-  ? currentStory !== undefined &&
-    totalStories !== undefined &&
-    currentStory < totalStories - 1
-  : currentStory !== undefined && currentStory > 0;
-  
+    ? currentStory !== undefined &&
+      totalStories !== undefined &&
+      currentStory < totalStories - 1
+    : currentStory !== undefined && currentStory > 0;
+
   // 🔑 Shared button style
   const baseButton =
     "p-4 rounded-full shadow-lg backdrop-blur-md border transition-all duration-300 text-white";

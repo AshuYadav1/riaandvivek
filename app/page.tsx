@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SmartCalendarButton from "@/app/components/SmartCalendarButton";
+import Image from "next/image";
 
 export default function WelcomePage() {
   return (
@@ -34,8 +35,15 @@ export default function WelcomePage() {
                    rounded-lg shadow-xl max-w-md md:max-w-lg flex flex-col items-center"
         style={{ backgroundColor: "rgba(245, 225, 200, 0.15)" }} // light faded yellow tint
       >
+        <Image src={"/LOGO.png"} alt="logo png" height={96} width={96} />
+
         {/* Names */}
-        <h1 className="hero-names">
+        <h1
+          style={{
+            marginTop: "16px",
+          }}
+          className="hero-names"
+        >
           {/* <span className="block lg:inline mb-2 lg:mb-0">Ria</span>
           <span className="text-[#f5e1c8] block lg:inline mb-2 lg:mb-0">&</span>
           <span className="block lg:inline">Vivek</span> */}

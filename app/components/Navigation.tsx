@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 // pls adjust order of the website so easier for people to rsvp
 // - Welcome
@@ -50,9 +51,17 @@ export default function Navigation() {
       <nav className="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-[20vh]">
         <div className="h-full flex flex-col justify-center items-center px-6">
           <div className="text-center mb-4">
-            <h1 className="title text-3xl lg:text-4xl xl:text-5xl text-amber-900 mb-2">
+            {/* <h1 className="title text-3xl lg:text-4xl xl:text-5xl text-amber-900 mb-2">
               Ria & Vivek - Wedding Celebrations
-            </h1>
+            </h1> */}
+            <Image
+              src={"/LOGO.png"}
+              alt="Logo"
+              height={108}
+              width={108}
+              className="mx-auto"
+            />
+
             <p className="text-amber-800 text-sm lg:text-base tracking-widest uppercase">
               March 6<sup>Th</sup>, 2026
             </p>
@@ -90,7 +99,14 @@ export default function Navigation() {
       {/* Tablet Navigation (mobile-style) */}
       <div className="hidden md:flex lg:hidden fixed inset-0 z-50 flex-col">
         <header className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-[10vh] flex items-center justify-center">
-          <h1 className="title text-2xl text-amber-900">Ria & Vivek</h1>
+          {/* <h1 className="title text-2xl text-amber-900">Ria & Vivek</h1> */}
+          <Image
+            src={"/LOGO.png"}
+            alt="Logo"
+            height={108}
+            width={108}
+            className="mx-auto"
+          />
         </header>
         <div className="h-[12vh]"></div>
 
@@ -178,7 +194,14 @@ export default function Navigation() {
       {/* Mobile Navigation */}
       <div className="md:hidden">
         <header className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-[10vh] flex items-center justify-center">
-          <h1 className="title text-2xl text-amber-900">Ria & Vivek</h1>
+          {/* <h1 className="title text-2xl text-amber-900">Ria & Vivek</h1> */}
+          <Image
+            src={"/LOGO.png"}
+            alt="Logo"
+            height={108}
+            width={108}
+            className="mx-auto"
+          />
         </header>
 
         {/* Toggle Menu Button (Hamburger ↔ X) */}

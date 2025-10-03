@@ -48,9 +48,9 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-[20vh]">
+      <nav className="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-48">
         <div className="h-full flex flex-col justify-center items-center px-6">
-          <div className="text-center mb-4">
+          <div className="text-center mb-2">
             {/* <h1 className="title text-3xl lg:text-4xl xl:text-5xl text-amber-900 mb-2">
               Ria & Vivek - Wedding Celebrations
             </h1> */}
@@ -62,8 +62,8 @@ export default function Navigation() {
               className="mx-auto"
             />
 
-            <p className="text-amber-800 text-sm lg:text-base tracking-widest uppercase">
-              March 6<sup>Th</sup>, 2026
+            <p className=" font-english text-3xl text-amber-800">
+              Ria &amp; Vivek
             </p>
           </div>
 

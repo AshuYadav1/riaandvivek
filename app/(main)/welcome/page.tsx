@@ -15,7 +15,7 @@ export default function WelcomePage() {
           flex justify-center
           md:px-[6%]"
       >
-        <div className="shadow-2xl h-screen">
+        <div className="shadow-2xl min-h-screen">
           <div className="grid grid-rows-[50vh_auto] lg:grid-cols-2 lg:grid-rows-1 h-full">
             {/* Left side - Image */}
             <div className="relative flex items-center justify-center bg-gradient-to-br from-amber-50 to-orange-50">
@@ -31,21 +31,8 @@ export default function WelcomePage() {
             </div>
 
             {/* Right side - Main Message */}
-            <div
-              className="
-    flex flex-col justify-center lg:items-center
-    m-8 sm:m-12 md:m-24 lg:m-0
-  "
-            >
-              <div
-                className="
-      bg-white bg-clip-padding text-center
-      p-[5%] px-[7%] lg:px-[15%]
-      border-[10px] border-white/50
-      shadow-xl rounded-lg
-      max-w-xl mx-auto space-y-4 lg:h-full text-gray-700 text-base leading-relaxed bg-gradient-to-r from-[#FFE8DB] to-white
-    "
-              >
+            <div className="flex flex-col justify-center lg:items-center m-8 sm:m-12 md:m-24 lg:m-0">
+              <div className="bg-white bg-clip-padding text-center p-[5%] px-[7%] lg:px-[15%] border-[10px] border-white/50 shadow-xl rounded-lg max-w-xl mx-auto space-y-4 lg:h-full text-gray-700 text-base leading-relaxed bg-gradient-to-r from-[#FFE8DB] to-white">
                 <div className="flex flex-col font-alice justify-center gap-6">
                   <h1 className="title leading-tight text-[#c4a882]">
                     Welcome

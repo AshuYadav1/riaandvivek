@@ -146,13 +146,17 @@ const faqs = [
   },
   {
     question: "Is there a specific RSVP deadline?",
-    answer:
-      "The RSVP deadline will be communicated shortly along with the formal invitations. We kindly request you to respond as soon as possible once you receive the official invite.",
+    answer: "The RSVP Deadline is 26th October",
   },
   {
     question: "What if I have dietary restrictions or allergies?",
     answer:
       "Please let us know your dietary preferences or allergies when you RSVP, and we’ll ensure our team accommodates your needs so you can enjoy the celebrations stress-free.",
+  },
+  {
+    question: "What is the check in and check out time for hotel?",
+    answer:
+      "The checkin and checkout time for hotel is 3pm and 12pm respectively.",
   },
   {
     question: "How can I contact the couple or wedding organizers?",

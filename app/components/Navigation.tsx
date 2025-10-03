@@ -48,9 +48,9 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-48">
+      <nav className="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-40">
         <div className="h-full flex flex-col justify-center items-center px-6">
-          <div className="text-center mb-4">
+          <div className="text-center flex items-center">
             {/* <h1 className="title text-3xl lg:text-4xl xl:text-5xl text-amber-900 mb-2">
               Ria & Vivek - Wedding Celebrations
             </h1> */}
@@ -64,7 +64,7 @@ export default function Navigation() {
               />
             </Link>
 
-            <p className=" font-english text-3xl -mt-4 text-amber-800">
+            <p className=" font-english text-3xl text-amber-800">
               Ria &amp; Vivek
             </p>
           </div>

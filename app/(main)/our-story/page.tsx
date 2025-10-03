@@ -78,7 +78,7 @@ export default function OurStoryPage() {
       title: "Universal Roller Coaster",
       date: "July 27, 2025",
       image: "/universal-rollercoaster.jpg",
-      content: `Ready for a wild ride! This photo perfectly sums up our journey together—full of excitement and adventure. Here we are, all smiles in front of the iconic Universal Studios globe in Singapore on July 27, 2025. It's just a taste of the thrilling life we're building, and we can't wait for you to be a part of it.`,
+      content: `Ready for a wild ride! This photo perfectly sums up our journey together—full of excitement and adventure. Here we are, all smiles in front of Universal Studios in Singapore.`,
       positon: "left",
     },
     {

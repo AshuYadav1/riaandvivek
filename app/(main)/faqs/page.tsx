@@ -171,7 +171,7 @@ const faqs = [
   {
     question: "Will the wedding events be indoors or outdoors?",
     answer:
-      "Most of the celebrations will take place outdoors at the beautiful Fairmont Udaipur Palace. A couple of events may be held indoors.",
+      "Most of the celebrations will take place outdoors at the beautiful Fairmont Udaipur Palace. A couple of events will be held indoors.",
   },
   {
     question: "Can I use the hotel’s facilities during my stay?",

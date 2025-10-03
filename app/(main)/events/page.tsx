@@ -137,7 +137,7 @@ const EventsPage = () => {
                   RECEPTION & AFTER PARTY
                 </p>
                 <p className="font-alice">
-                  Is a joyous occasion where friends and family can express
+                  is a joyous occasion where friends and family can express
                   their love and well wishes for the couple&apos;s life
                   together.
                 </p>

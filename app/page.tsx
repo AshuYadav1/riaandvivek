@@ -35,20 +35,15 @@ export default function WelcomePage() {
                    rounded-lg shadow-xl max-w-md md:max-w-lg flex flex-col items-center"
         style={{ backgroundColor: "rgba(245, 225, 200, 0.15)" }} // light faded yellow tint
       >
-        <Image src={"/LOGO.png"} alt="logo png" height={96} width={96} />
+        <Image src={"/LOGO.png"} alt="logo png" height={160} width={160} />
 
         {/* Names */}
-        <h1
-          style={{
-            marginTop: "16px",
-          }}
-          className="hero-names"
-        >
+        <div className="text-3xl font-english mb-6">
           {/* <span className="block lg:inline mb-2 lg:mb-0">Ria</span>
           <span className="text-[#f5e1c8] block lg:inline mb-2 lg:mb-0">&</span>
           <span className="block lg:inline">Vivek</span> */}
           Ria <span className="text-[#f5e1c8]">&amp;</span> Vivek
-        </h1>
+        </div>
 
         {/* Dates with divider */}
         <div className="flex items-center justify-center w-full mb-8">

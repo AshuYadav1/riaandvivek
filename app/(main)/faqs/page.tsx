@@ -151,7 +151,7 @@ const faqs = [
   {
     question: "What if I have dietary restrictions or allergies?",
     answer:
-      "Please let us know your dietary preferences or allergies when you RSVP, and we’ll ensure our team accommodates your needs so you can enjoy the celebrations stress-free.",
+      "For any allergies or dietary preferences, please inform the Horizon WIE team so we can make the necessary arrangements.",
   },
   {
     question: "What is the check in and check out time for hotel?",
@@ -161,7 +161,7 @@ const faqs = [
   {
     question: "How can I contact the couple or wedding organizers?",
     answer:
-      "For any wedding-related questions, please reach out to our wedding planning team at [email/phone/WhatsApp]. They’ll be happy to assist you.",
+      "For any queries, feel free to reach out to the Horizon Wie Team via riawedsvivek@gmail.com & (Whatsapp & Call) on +91 9769109082",
   },
   {
     question: "What is the weather like in Udaipur in March?",

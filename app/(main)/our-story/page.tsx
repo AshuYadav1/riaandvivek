@@ -4,136 +4,103 @@ import "./our-story.css";
 import type React from "react";
 import Navigation from "../../components/Navigation";
 import Timeline from "./components/Timeline";
+import { useEffect, useState } from "react";
+
+const stories = [
+  {
+    title: "Ascot Day Out",
+    date: "June 22, 2024",
+    image: "/ascot.jpg",
+    content: `This is us, celebrating a perfect day at Ascot.`,
+    positon: "left",
+  },
+  {
+    title: "Ria meets Vivek's Family",
+    date: "December 14, 2024",
+    image: "/ria-meets-vivek-family.jpg",
+    content: `Here is a special moment we'll never forget: the day Ria met my family. On December 14, 2024, we all got together, and it felt so natural, like the beginning of something truly wonderful.`,
+    positon: "right",
+  },
+  {
+    title: "Vivek meets Ria's Family",
+    date: "December 23, 2024",
+    image: "/vivek-meets-ria-family.jpg",
+    content: `New beginnings and growing families! We absolutely loved this moment on December 23, 2024, when Vivek officially met Ria's family. Surrounded by holiday cheer and a beautiful Christmas tree, it was the perfect start to our combined family journey.`,
+    positon: "left",
+  },
+  {
+    title: "Isle of Wight Excursion",
+    date: "June 21, 2025",
+    image: "/isle-of-wight-excursion.jpg",
+    content: `We took our first boat trip to the Isle of Wight, soaking in the beautiful views and making memories that last a lifetime.`,
+    positon: "right",
+  },
+  {
+    title: "Ria passes!",
+    date: "July 18, 2025",
+    image: "/ria-passes.jpg",
+    content: `A day to be proud of! This photo captures the moment on July 18, 2025, when we celebrated Ria's incredible achievement.`,
+    positon: "left",
+  },
+  {
+    title: "Races in Singapore",
+    date: "July 27, 2025",
+    image: "/races-in-singapore.jpg",
+    content: `Ready for a wild ride! This photo perfectly sums up our journey together–full of excitement and adventure.`,
+    positon: "right",
+  },
+  {
+    title: "Universal Roller Coaster",
+    date: "July 27, 2025",
+    image: "/universal-rollercoaster.jpg",
+    content: `Here we are, all smiles in front of Universal Studios in Singapore.`,
+    positon: "left",
+  },
+  {
+    title: "She said yes!",
+    date: "July 28, 2025",
+    image: "/she-says-yes.jpg",
+    content: `On July 28, 2025, our biggest adventure began. With the setting sun as our witness and the water gently swaying beneath us, Vivek got down on one knee and asked Ria to marry him. This moment, captured in front of a heart-shaped arch and a 'Marry Me' sign, is the start of our journey toward happily ever after.`,
+    positon: "right",
+  },
+  {
+    title: "Celebrating engaged life",
+    date: "July 28, 2025",
+    image: "/celebrating-engaged-life.jpg",
+    content: `Celebrating engaged life.`,
+    positon: "left",
+  },
+  {
+    title: "Roka-fied",
+    date: "July 29, 2025",
+    image: "/roka-fied.jpg",
+    content: `Roka-fied the day after!`,
+    positon: "right",
+  },
+  {
+    title: "She said yes again!",
+    date: "July 30, 2025",
+    image: "/she-says-yes-again.jpg",
+    content: `She says yes again.`,
+    positon: "left",
+  },
+  {
+    title: "Trip to Liverpool",
+    date: "September 09, 2025",
+    image: "/last.jpg",
+    content: `Wedding planning over cups of coffee in Italy`,
+    positon: "right",
+  },
+];
 
 export default function OurStoryPage() {
-  // const [currentStory, setCurrentStory] = useState(0);
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const [song] = useState(new Audio("/song.mp3"));
 
-  // useEffect(() => {
-  //   if (isModalOpen) {
-  //     document.body.style.overflow = "hidden"; // stop background scroll
-  //   } else {
-  //     document.body.style.overflow = ""; // reset
-  //   }
+  useEffect(() => {
+    song.play();
 
-  //   return () => {
-  //     document.body.style.overflow = ""; // cleanup on unmount
-  //   };
-  // }, [isModalOpen]);
-
-  // allow Esc to close modal
-  // useEffect(() => {
-  //   const onKey = (e: KeyboardEvent) => {
-  //     if (e.key === "Escape") setIsModalOpen(false);
-  //   };
-  //   window.addEventListener("keydown", onKey);
-  //   return () => window.removeEventListener("keydown", onKey);
-  // }, []);
-
-  const stories = [
-    {
-      title: "Ascot Day Out",
-      date: "June 22, 2024",
-      image: "/ascot.jpg",
-      content: `This is us, celebrating a perfect day at Ascot.`,
-      positon: "left",
-    },
-    {
-      title: "Ria meets Vivek's Family",
-      date: "December 14, 2024",
-      image: "/ria-meets-vivek-family.jpg",
-      content: `Here is a special moment we'll never forget: the day Ria met my family. On December 14, 2024, we all got together, and it felt so natural, like the beginning of something truly wonderful.`,
-      positon: "right",
-    },
-    {
-      title: "Vivek meets Ria's Family",
-      date: "December 23, 2024",
-      image: "/vivek-meets-ria-family.jpg",
-      content: `New beginnings and growing families! We absolutely loved this moment on December 23, 2024, when Vivek officially met Ria's family. Surrounded by holiday cheer and a beautiful Christmas tree, it was the perfect start to our combined family journey.`,
-      positon: "left",
-    },
-    {
-      title: "Isle of Wight Excursion",
-      date: "June 21, 2025",
-      image: "/isle-of-wight-excursion.jpg",
-      content: `We took our first boat trip to the Isle of Wight, soaking in the beautiful views and making memories that last a lifetime.`,
-      positon: "right",
-    },
-    {
-      title: "Ria passes!",
-      date: "July 18, 2025",
-      image: "/ria-passes.jpg",
-      content: `A day to be proud of! This photo captures the moment on July 18, 2025, when we celebrated Ria's incredible achievement.`,
-      positon: "left",
-    },
-    {
-      title: "Races in Singapore",
-      date: "July 27, 2025",
-      image: "/races-in-singapore.jpg",
-      content: `Ready for a wild ride! This photo perfectly sums up our journey together–full of excitement and adventure.`,
-      positon: "right",
-    },
-    {
-      title: "Universal Roller Coaster",
-      date: "July 27, 2025",
-      image: "/universal-rollercoaster.jpg",
-      content: `Here we are, all smiles in front of Universal Studios in Singapore.`,
-      positon: "left",
-    },
-    {
-      title: "She said yes!",
-      date: "July 28, 2025",
-      image: "/she-says-yes.jpg",
-      content: `On July 28, 2025, our biggest adventure began. With the setting sun as our witness and the water gently swaying beneath us, Vivek got down on one knee and asked Ria to marry him. This moment, captured in front of a heart-shaped arch and a 'Marry Me' sign, is the start of our journey toward happily ever after.`,
-      positon: "right",
-    },
-    {
-      title: "Celebrating engaged life",
-      date: "July 28, 2025",
-      image: "/celebrating-engaged-life.jpg",
-      content: `Celebrating engaged life.`,
-      positon: "left",
-    },
-    {
-      title: "Roka-fied",
-      date: "July 29, 2025",
-      image: "/roka-fied.jpg",
-      content: `Roka-fied the day after!`,
-      positon: "right",
-    },
-    {
-      title: "She said yes again!",
-      date: "July 30, 2025",
-      image: "/she-says-yes-again.jpg",
-      content: `She says yes again.`,
-      positon: "left",
-    },
-    {
-      title: "Trip to Liverpool",
-      date: "September 09, 2025",
-      image: "/last.jpg",
-      content: `Wedding planning over cups of coffee in Italy`,
-      positon: "right",
-    },
-  ];
-
-  // const handlePreviousStory = () => {
-  //   setCurrentStory((prev) => (prev - 1 + stories.length) % stories.length);
-  // };
-
-  // const handleNextStory = () => {
-  //   setCurrentStory((prev) => (prev + 1) % stories.length);
-  // };
-
-  // const handlePreviousImage = (e: React.MouseEvent) => {
-  //   e.stopPropagation();
-  //   setCurrentStory((prev) => (prev - 1 + stories.length) % stories.length);
-  // };
-
-  // const handleNextImage = (e: React.MouseEvent) => {
-  //   e.stopPropagation();
-  //   setCurrentStory((prev) => (prev + 1) % stories.length);
-  // };
+    return () => song.pause();
+  }, []);
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">

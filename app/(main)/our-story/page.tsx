@@ -4,7 +4,7 @@ import "./our-story.css";
 import type React from "react";
 import Navigation from "../../components/Navigation";
 import Timeline from "./components/Timeline";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const stories = [
   {
@@ -94,12 +94,12 @@ const stories = [
 ];
 
 export default function OurStoryPage() {
-  const [song] = useState(new Audio("/song.mp3"));
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    song.play();
-
-    return () => song.pause();
+    audioRef.current = new Audio("/song.mp3");
+    audioRef.current.play();
+    return () => audioRef.current?.pause();
   }, []);
 
   return (

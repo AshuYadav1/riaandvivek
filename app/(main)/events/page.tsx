@@ -60,7 +60,7 @@ const EventsPage = () => {
             <div className="h-48 w-full flex items-center justify-evenly my-4">
               <div className="lg:w-96 md:w-80 w-44 text-sm">
                 <p className="font-alice text-2xl text-center text-[#c4a882]">
-                  SANGEET CEREMONY
+                  SANGEET & AFTER PARTY
                 </p>
                 <p className="font-alice">
                   involving music, dancing, and singing that unites families and

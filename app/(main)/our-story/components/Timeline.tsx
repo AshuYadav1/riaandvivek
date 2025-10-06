@@ -32,8 +32,6 @@ const heartVarients = {
 
 export default function Timeline({
   stories,
-  // setCurrentStory,
-  setIsModalOpen,
 }: {
   stories: {
     title: string;
@@ -43,7 +41,7 @@ export default function Timeline({
     positon: string;
   }[];
   // setCurrentStory: Dispatch<SetStateAction<number>>;
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
+  // setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
     <div className="h-full w-full py-6 rounded-xl shadow-lg font-mono">
@@ -61,7 +59,7 @@ export default function Timeline({
             content={content}
             // setCurrentStory={setCurrentStory}
             // index={index}
-            setIsModalOpen={setIsModalOpen}
+            // setIsModalOpen={setIsModalOpen}
           />
         ))}
       </div>
@@ -72,15 +70,15 @@ export default function Timeline({
   );
 }
 
+// index,
+// setCurrentStory,
+// setIsModalOpen,
 function AnimatedEntry({
   side,
   title,
   image,
   date,
   content,
-  // index,
-  // setCurrentStory,
-  setIsModalOpen,
 }: {
   side: string;
   title: string;
@@ -89,7 +87,7 @@ function AnimatedEntry({
   content: string;
   // index: number;
   // setCurrentStory: Dispatch<SetStateAction<number>>;
-  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
+  // setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.15 });
@@ -140,7 +138,7 @@ function AnimatedEntry({
               <div
                 className="mb-4 sm:mb-6 relative cursor-pointer"
                 onClick={() => {
-                  setIsModalOpen(true);
+                  // setIsModalOpen(true);
                   // setCurrentStory(index);
                 }}
               >
@@ -181,7 +179,7 @@ function AnimatedEntry({
               <div
                 className="mb-4 sm:mb-6 relative cursor-pointer"
                 onClick={() => {
-                  setIsModalOpen(true);
+                  // setIsModalOpen(true);
                   // setCurrentStory(index);
                 }}
               >

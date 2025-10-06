@@ -8,28 +8,28 @@ import Timeline from "./components/Timeline";
 
 export default function OurStoryPage() {
   // const [currentStory, setCurrentStory] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden"; // stop background scroll
-    } else {
-      document.body.style.overflow = ""; // reset
-    }
+  // useEffect(() => {
+  //   if (isModalOpen) {
+  //     document.body.style.overflow = "hidden"; // stop background scroll
+  //   } else {
+  //     document.body.style.overflow = ""; // reset
+  //   }
 
-    return () => {
-      document.body.style.overflow = ""; // cleanup on unmount
-    };
-  }, [isModalOpen]);
+  //   return () => {
+  //     document.body.style.overflow = ""; // cleanup on unmount
+  //   };
+  // }, [isModalOpen]);
 
   // allow Esc to close modal
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsModalOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  // useEffect(() => {
+  //   const onKey = (e: KeyboardEvent) => {
+  //     if (e.key === "Escape") setIsModalOpen(false);
+  //   };
+  //   window.addEventListener("keydown", onKey);
+  //   return () => window.removeEventListener("keydown", onKey);
+  // }, []);
 
   const stories = [
     {
@@ -187,7 +187,7 @@ export default function OurStoryPage() {
             <Timeline
               stories={stories}
               // setCurrentStory={setCurrentStory}
-              setIsModalOpen={setIsModalOpen}
+              // setIsModalOpen={setIsModalOpen}
             />
 
             {/* <section className="relative lg:h-[9400px] w-full flex flex-col">

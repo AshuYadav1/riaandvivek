@@ -4,7 +4,7 @@ import "./our-story.css";
 import type React from "react";
 import Navigation from "../../components/Navigation";
 import Timeline from "./components/Timeline";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const stories = [
   {

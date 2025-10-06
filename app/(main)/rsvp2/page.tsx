@@ -289,7 +289,9 @@ export default function RSVPPage2() {
               className="text-white text-center mb-6 sm:mb-8 md:mb-10 text-9xl sm:text-4xl md:text-5xl font-trajanpro"
               style={{ marginTop: "5rem" }}
             >
-              RiViSP
+              <span className="text-[#f9aa47]">Ri</span>
+              <span className="text-[#306ff2]">Vi</span>
+              SP
             </motion.h1>
 
             {/* Form */}

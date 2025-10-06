@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -38,12 +38,22 @@ export default function Navigation() {
     };
   }, [isOpen]);
 
-  // Logic to determine the next page for navigation
+  // // Logic to determine the next page for navigation
   const currentPageIndex = navigationItems.findIndex(
     (item) => item.href === pathname
   );
+
+  console.log(currentPageIndex);
+
   const nextPage =
     navigationItems[(currentPageIndex + 1) % navigationItems.length];
+  console.log(nextPage);
+
+  const prevPage =
+    currentPageIndex === 0
+      ? null
+      : navigationItems[(currentPageIndex - 1) % navigationItems.length];
+  console.log(prevPage);
 
   return (
     <>
@@ -133,11 +143,21 @@ export default function Navigation() {
           </AnimatePresence>
         </button>
 
+        {/* Prev page btn */}
+        {prevPage && (
+          <Link
+            href={prevPage.href}
+            aria-label="Go to previous page"
+            className="fixed bottom-4 right-20 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
+          >
+            <ChevronLeft size={24} />
+          </Link>
+        )}
         {/* Next Page Button */}
         <Link
           href={nextPage.href}
           aria-label="Go to next page"
-          className="fixed bottom-4 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-[#F5D2D2] shadow-lg text-amber-700"
+          className="fixed bottom-4 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
         >
           <ChevronRight size={24} />
         </Link>
@@ -229,11 +249,21 @@ export default function Navigation() {
           </AnimatePresence>
         </button>
 
+        {/* Prev page btn */}
+        {prevPage && (
+          <Link
+            href={prevPage.href}
+            aria-label="Go to previous page"
+            className="fixed bottom-4 right-18 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
+          >
+            <ChevronLeft size={24} />
+          </Link>
+        )}
         {/* Next Page Button */}
         <Link
           href={nextPage.href}
           aria-label="Go to next page"
-          className="fixed bottom-4 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-[#F5D2D2] shadow-lg text-amber-700"
+          className="fixed bottom-4 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
         >
           <ChevronRight size={24} />
         </Link>

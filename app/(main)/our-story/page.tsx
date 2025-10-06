@@ -43,7 +43,7 @@ export default function OurStoryPage() {
       title: "Ria meets Vivek's Family",
       date: "December 14, 2024",
       image: "/ria-meets-vivek-family.jpg",
-      content: `Here is a special moment we'll never forget: the day Ria met my family. On December 15, 2024, we all got together, and it felt so natural, like the beginning of something truly wonderful.`,
+      content: `Here is a special moment we'll never forget: the day Ria met my family. On December 14, 2024, we all got together, and it felt so natural, like the beginning of something truly wonderful.`,
       positon: "right",
     },
     {
@@ -71,14 +71,14 @@ export default function OurStoryPage() {
       title: "Races in Singapore",
       date: "July 27, 2025",
       image: "/races-in-singapore.jpg",
-      content: `Ready for a wild ride! This photo perfectly sums up our journey together—full of excitement and adventure. Here we are, all smiles in front of Universal Studios in Singapore.`,
+      content: `Ready for a wild ride! This photo perfectly sums up our journey together–full of excitement and adventure.`,
       positon: "right",
     },
     {
       title: "Universal Roller Coaster",
       date: "July 27, 2025",
       image: "/universal-rollercoaster.jpg",
-      content: `Ready for a wild ride! This photo perfectly sums up our journey together—full of excitement and adventure. Here we are, all smiles in front of Universal Studios in Singapore.`,
+      content: `Here we are, all smiles in front of Universal Studios in Singapore.`,
       positon: "left",
     },
     {

@@ -7,14 +7,6 @@ import { Menu, X, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-// pls adjust order of the website so easier for people to rsvp
-// - Welcome
-// - Events
-// - ⁠RSVP
-// - ⁠Our story
-// - ⁠Essentials
-// - ⁠FAQs
-
 const navigationItems = [
   { name: "WELCOME", href: "/welcome" },
   { name: "EVENTS", href: "/events" },
@@ -38,22 +30,18 @@ export default function Navigation() {
     };
   }, [isOpen]);
 
-  // // Logic to determine the next page for navigation
+  // Logic to determine the next page for navigation
   const currentPageIndex = navigationItems.findIndex(
     (item) => item.href === pathname
   );
 
-  console.log(currentPageIndex);
-
   const nextPage =
     navigationItems[(currentPageIndex + 1) % navigationItems.length];
-  console.log(nextPage);
 
   const prevPage =
     currentPageIndex === 0
       ? null
       : navigationItems[(currentPageIndex - 1) % navigationItems.length];
-  console.log(prevPage);
 
   return (
     <>

@@ -2,7 +2,6 @@
 
 import "./our-story.css";
 import type React from "react";
-import { useState, useEffect } from "react";
 import Navigation from "../../components/Navigation";
 import Timeline from "./components/Timeline";
 

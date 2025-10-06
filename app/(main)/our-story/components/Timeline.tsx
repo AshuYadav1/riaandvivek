@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { useEffect } from "react";
 
 import Image from "next/image";
 import { FaHeart } from "react-icons/fa6";

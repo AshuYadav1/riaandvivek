@@ -1,5 +1,21 @@
 import mongoose, { models, Schema } from "mongoose";
 
+const MemberSchema = new Schema(
+  {
+    fullName: {
+      type: String,
+      require: true,
+    },
+    age: {
+      type: Number,
+      require: true,
+    },
+  },
+  {
+    _id: false,
+  }
+);
+
 const RsvpSchema = new Schema(
   {
     name: {
@@ -13,6 +29,10 @@ const RsvpSchema = new Schema(
     email: {
       type: String,
       require: true,
+    },
+    familyDetails: {
+      type: [MemberSchema],
+      default: [],
     },
     attending: {
       type: String,

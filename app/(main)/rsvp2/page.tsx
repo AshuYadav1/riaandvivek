@@ -8,6 +8,7 @@ import axios from "axios";
 import SmartCalendarButton from "@/app/components/SmartCalendarButton";
 
 const countryCodes = [
+  { name: "India", code: "+91" },
   { name: "Afghanistan", code: "+93" },
   { name: "Albania", code: "+355" },
   { name: "Algeria", code: "+213" },
@@ -57,7 +58,6 @@ const countryCodes = [
   { name: "Hong Kong", code: "+852" },
   { name: "Hungary", code: "+36" },
   { name: "Iceland", code: "+354" },
-  { name: "India", code: "+91" },
   { name: "Indonesia", code: "+62" },
   { name: "Iran", code: "+98" },
   { name: "Iraq", code: "+964" },

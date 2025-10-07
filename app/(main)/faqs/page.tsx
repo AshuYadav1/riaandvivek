@@ -194,7 +194,7 @@ export default function FAQPage() {
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-8 px-6 py-8 md:py-16 mt-10 md:mt-26">
         {/* Left Side Image */}
-        <div className="lg:col-span-7 mt-2">
+        <div className="h-[880px] lg:col-span-7 mt-2">
           <div className="relative rounded-2xl overflow-hidden shadow-md h-full min-h-[500px]">
             <Image
               src={faq}

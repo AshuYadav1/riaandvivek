@@ -387,7 +387,6 @@ export default function RSVPPage2() {
                   max={10}
                   value={numOfMembers}
                   onChange={(e) => setNumOfMember(e.target.value)}
-                  placeholder="Enter number of family members"
                   className="w-full bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
                   required
                 />

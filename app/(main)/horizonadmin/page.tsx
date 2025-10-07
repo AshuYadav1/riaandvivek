@@ -12,7 +12,7 @@ interface RSVP {
   members: number;
   familyDetails: [
     {
-      fullName: string;
+      name: string;
       age: number;
     }
   ];
@@ -24,7 +24,7 @@ const HorizonAdminPage = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   const [error, setError] = useState("");
 
   const getAllRSVPs = async () => {
@@ -155,10 +155,10 @@ const HorizonAdminPage = () => {
                   {rsvp.familyDetails &&
                     rsvp.familyDetails.map((member, i) => (
                       <p
-                        key={member.fullName + i}
+                        key={member.name + i}
                         className="border-[1px] px-2 py-1"
                       >
-                        {member.fullName}
+                        {member.name}
                       </p>
                     ))}
                 </div>
@@ -166,7 +166,7 @@ const HorizonAdminPage = () => {
                   {rsvp.familyDetails &&
                     rsvp.familyDetails.map((member, i) => (
                       <p
-                        key={member.fullName + member.age + i}
+                        key={member.name + member.age + i}
                         className="border-[1px] px-2 py-1"
                       >
                         {member.age}

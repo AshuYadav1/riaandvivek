@@ -2,7 +2,7 @@ import mongoose, { models, Schema } from "mongoose";
 
 const MemberSchema = new Schema(
   {
-    fullName: {
+    name: {
       type: String,
       require: true,
     },

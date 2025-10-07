@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navigation from "@/app/components/Navigation";
 import axios from "axios";
 import SmartCalendarButton from "@/app/components/SmartCalendarButton";
 
-export const countryCodes = [
+const countryCodes = [
   { name: "Afghanistan", code: "+93" },
   { name: "Albania", code: "+355" },
   { name: "Algeria", code: "+213" },
@@ -124,6 +124,11 @@ export const countryCodes = [
   { name: "Zimbabwe", code: "+263" },
 ];
 
+type Member = {
+  name: string;
+  age: string;
+};
+
 export default function RSVPPage2() {
   const [formData, setFormData] = useState({
     name: "",
@@ -131,11 +136,43 @@ export default function RSVPPage2() {
     contact: "",
     email: "",
     attending: "",
-    members: 1,
-    familyDetails: [{ fullName: "", age: "" }],
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const [numOfMembers, setNumOfMember] = useState("");
+  const [attendingMembers, setAttendingMembers] = useState<Member[] | null>(
+    null
+  );
+
+  // Update attendingMembers array when numOfMembers changes
+  useEffect(() => {
+    const num = Number(numOfMembers);
+    if (num !== null && num > 0) {
+      const members = Array.from({ length: num }, () => ({
+        name: "",
+        age: "",
+      }));
+      setAttendingMembers(members);
+    } else {
+      setAttendingMembers(null);
+    }
+  }, [numOfMembers]);
+
+  // Handle individual field updates
+  const handleMemberChange = (
+    index: number,
+    field: keyof Member,
+    value: string
+  ) => {
+    if (!attendingMembers) return;
+    const updatedMembers = [...attendingMembers];
+    updatedMembers[index] = {
+      ...updatedMembers[index],
+      [field]: value,
+    };
+    setAttendingMembers(updatedMembers);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -145,53 +182,18 @@ export default function RSVPPage2() {
     }));
   };
 
-  console.log(formData);
-
-  // ✅ Updated: Allow typing freely and dynamically update family details
-  const handleMemberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-
-    // Allow empty typing (so user can backspace)
-    if (value === "") {
-      setFormData((prev) => ({
-        ...prev,
-        members: "" as any,
-        familyDetails: [],
-      }));
-      return;
-    }
-
-    // Ensure valid number between 1–10
-    const num = Math.max(1, Math.min(10, parseInt(value) || 1));
-
-    setFormData((prev) => ({
-      ...prev,
-      members: num,
-      familyDetails: Array.from(
-        { length: num },
-        (_, i) => prev.familyDetails[i] || { fullName: "", age: "" }
-      ),
-    }));
-  };
-
-  const handleFamilyDetailChange = (
-    index: number,
-    field: string,
-    value: string
-  ) => {
-    const updated = [...formData.familyDetails];
-    updated[index] = { ...updated[index], [field]: value };
-    setFormData((prev) => ({ ...prev, familyDetails: updated }));
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log(formData);
+    const data = {
+      ...formData,
+      members: numOfMembers,
+      familyDetails: attendingMembers,
+    };
 
     try {
       setLoading(true);
-      await axios.post(`/api/rsvps`, formData);
+      await axios.post(`/api/rsvps`, data);
       setSuccess(true);
     } catch (error) {
       console.error(error);
@@ -345,10 +347,10 @@ export default function RSVPPage2() {
                 <input
                   type="number"
                   name="members"
-                  value={formData.members}
                   min={1}
                   max={10}
-                  onChange={handleMemberChange}
+                  value={numOfMembers}
+                  onChange={(e) => setNumOfMember(e.target.value)}
                   placeholder="Enter number of family members"
                   className="w-full bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
                   required
@@ -357,34 +359,34 @@ export default function RSVPPage2() {
 
               {/* Family Details */}
               <div className="space-y-4 mt-4">
-                {formData.familyDetails.map((member, index) => (
-                  <div key={index} className="flex flex-col sm:flex-row gap-4">
-                    <input
-                      type="text"
-                      placeholder={`Full Name ${index + 1}`}
-                      value={member.fullName}
-                      onChange={(e) =>
-                        handleFamilyDetailChange(
-                          index,
-                          "fullName",
-                          e.target.value
-                        )
-                      }
-                      required
-                      className="flex-1 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
-                    />
-                    <input
-                      type="number"
-                      placeholder="Age"
-                      value={member.age}
-                      onChange={(e) =>
-                        handleFamilyDetailChange(index, "age", e.target.value)
-                      }
-                      required
-                      className="w-32 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
-                    />
-                  </div>
-                ))}
+                {attendingMembers &&
+                  attendingMembers.map((member, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col sm:flex-row gap-4"
+                    >
+                      <input
+                        type="text"
+                        placeholder={`Full Name ${index + 1}`}
+                        value={member.name}
+                        onChange={(e) =>
+                          handleMemberChange(index, "name", e.target.value)
+                        }
+                        required
+                        className="flex-1 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
+                      />
+                      <input
+                        type="number"
+                        placeholder="Age"
+                        value={member.age}
+                        onChange={(e) =>
+                          handleMemberChange(index, "age", e.target.value)
+                        }
+                        required
+                        className="w-32 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
+                      />
+                    </div>
+                  ))}
               </div>
 
               {/* Attendance */}

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 interface RSVP {
   name: string;
+  countryCode: number;
   contact: number;
   email: string;
   attending: "Yes" | "No" | "Maybe";
@@ -23,7 +24,7 @@ const HorizonAdminPage = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [error, setError] = useState("");
 
   const getAllRSVPs = async () => {
@@ -117,9 +118,12 @@ const HorizonAdminPage = () => {
           </div>
         ) : rsvps.length ? (
           <>
-            <div className="grid grid-cols-6 wrap-break-word">
+            <div className="grid grid-cols-7 wrap-break-word">
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Name
+              </p>
+              <p className="border-[1px] text-left px-2 py-1 font-semibold">
+                Country Code
               </p>
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Contact
@@ -140,9 +144,10 @@ const HorizonAdminPage = () => {
             {rsvps.map((rsvp, index) => (
               <div
                 key={rsvp.email + index}
-                className="grid grid-cols-6 wrap-break-word"
+                className="grid grid-cols-7 wrap-break-word"
               >
                 <p className="border-[1px] px-2 py-1">{rsvp.name}</p>
+                <p className="border-[1px] px-2 py-1">{rsvp.countryCode}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.contact}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.email}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.attending}</p>

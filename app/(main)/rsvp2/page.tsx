@@ -10,6 +10,7 @@ import SmartCalendarButton from "@/app/components/SmartCalendarButton";
 export default function RSVPPage2() {
   const [formData, setFormData] = useState({
     name: "",
+    countryCode: "",
     contact: "",
     email: "",
     attending: "",
@@ -88,6 +89,7 @@ export default function RSVPPage2() {
 
   const fields = [
     { name: "name", type: "text", placeholder: "Full Name" },
+    { name: "countryCode", type: "number", placeholder: "Country Code" },
     { name: "contact", type: "tel", placeholder: "Contact No" },
     { name: "email", type: "email", placeholder: "Email ID" },
   ];

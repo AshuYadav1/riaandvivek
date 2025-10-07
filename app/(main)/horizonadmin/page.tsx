@@ -24,7 +24,7 @@ const HorizonAdminPage = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [error, setError] = useState("");
 
   const getAllRSVPs = async () => {

@@ -64,7 +64,8 @@ const EventsPage = () => {
                 </p>
                 <p className="font-alice">
                   involving music, dancing, and singing that unites families and
-                  friends to celebrate the upcoming union of the couple
+                  friends to celebrate the upcoming union of the couple, this
+                  event will be held at Jewel Ballroom
                 </p>
               </div>
               <Image height={140} width={140} src={sangeet} alt="sangeet" />

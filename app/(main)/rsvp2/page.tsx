@@ -271,7 +271,9 @@ export default function RSVPPage2() {
               className="text-white text-center mb-6 sm:mb-8 md:mb-10 text-5xl sm:text-5xl font-trajanpro"
               style={{ marginTop: "5rem" }}
             >
-              RiViSP
+              <span className="text-[#f9aa47]">Ri</span>
+              <span className="text-[#306ff2]">Vi</span>
+              SP
             </motion.h1>
 
             <motion.form
@@ -334,6 +336,40 @@ export default function RSVPPage2() {
                 );
               })}
 
+              {/* Attendance */}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, x: -100 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="mt-6"
+              >
+                <p className="text-sm font-medium text-white mb-3 font-alice">
+                  Attending the wedding
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  {["Yes", "No", "Maybe"].map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="attending"
+                        value={option}
+                        checked={formData.attending === option}
+                        onChange={handleChange}
+                        className="text-white focus:ring-2 focus:ring-[#d6c7a1]"
+                        required
+                      />
+                      <span className="ml-2 text-white font-alice">
+                        {option}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </motion.div>
+
               {/* ✅ Number of Family Members */}
               <motion.div
                 variants={{
@@ -388,40 +424,6 @@ export default function RSVPPage2() {
                     </div>
                   ))}
               </div>
-
-              {/* Attendance */}
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, x: -100 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                className="mt-6"
-              >
-                <p className="text-sm font-medium text-white mb-3 font-alice">
-                  Attending the wedding
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  {["Yes", "No", "Maybe"].map((option) => (
-                    <label
-                      key={option}
-                      className="flex items-center cursor-pointer"
-                    >
-                      <input
-                        type="radio"
-                        name="attending"
-                        value={option}
-                        checked={formData.attending === option}
-                        onChange={handleChange}
-                        className="text-white focus:ring-2 focus:ring-[#d6c7a1]"
-                        required
-                      />
-                      <span className="ml-2 text-white font-alice">
-                        {option}
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </motion.div>
 
               {/* Submit */}
               <motion.div

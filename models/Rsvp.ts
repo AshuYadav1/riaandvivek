@@ -23,7 +23,7 @@ const RsvpSchema = new Schema(
       require: true,
     },
     countryCode: {
-      type: Number,
+      type: String,
       require: true,
     },
     contact: {

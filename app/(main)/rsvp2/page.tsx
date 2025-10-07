@@ -211,9 +211,9 @@ export default function RSVPPage2() {
   };
 
   const fields = [
-    { name: "name", type: "text", placeholder: "Full Name" },
-    { name: "contact", type: "tel", placeholder: "Contact No" },
-    { name: "email", type: "email", placeholder: "Email ID" },
+    { name: "name", type: "text", placeholder: "Full Name*" },
+    { name: "contact", type: "tel", placeholder: "Contact No*" },
+    { name: "email", type: "email", placeholder: "Email ID*" },
   ];
 
   if (success)

@@ -66,6 +66,7 @@ const CustomSelect = ({
   return (
     <>
       <button
+        type="button"
         onClick={() => setOpen(!open)}
         className="relative h-8 w-22 cursor-pointer outline-none focus-within:border-primary px-2 py-[22px] text-sm flex items-center justify-between"
       >

@@ -14,6 +14,7 @@ interface RSVP {
     {
       name: string;
       age: number;
+      contact?: number;
     }
   ];
 }
@@ -24,7 +25,7 @@ const HorizonAdminPage = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   const [error, setError] = useState("");
 
   const getAllRSVPs = async () => {
@@ -118,7 +119,7 @@ const HorizonAdminPage = () => {
           </div>
         ) : rsvps.length ? (
           <>
-            <div className="grid grid-cols-7 wrap-break-word">
+            <div className="grid grid-cols-8 wrap-break-word">
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Name
               </p>
@@ -140,11 +141,14 @@ const HorizonAdminPage = () => {
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Age
               </p>
+              <p className="border-[1px] text-left px-2 py-1 font-semibold">
+                Contact
+              </p>
             </div>
             {rsvps.map((rsvp, index) => (
               <div
                 key={rsvp.email + index}
-                className="grid grid-cols-7 wrap-break-word"
+                className="grid grid-cols-8 wrap-break-word"
               >
                 <p className="border-[1px] px-2 py-1">{rsvp.name}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.countryCode}</p>
@@ -170,6 +174,17 @@ const HorizonAdminPage = () => {
                         className="border-[1px] px-2 py-1"
                       >
                         {member.age}
+                      </p>
+                    ))}
+                </div>
+                <div className="grid grid-cols-1">
+                  {rsvp.familyDetails &&
+                    rsvp.familyDetails.map((member, i) => (
+                      <p
+                        key={member.name + member.contact + i}
+                        className="border-[1px] px-2 py-1"
+                      >
+                        {member.contact}
                       </p>
                     ))}
                 </div>

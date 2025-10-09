@@ -97,9 +97,21 @@ export default function OurStoryPage() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/song.mp3");
-    audioRef.current.play();
-    return () => audioRef.current?.pause();
+    const id = setTimeout(() => {
+      if (!sessionStorage.getItem("audioPlayed")) {
+        audioRef.current = new Audio("/song.mpeg");
+        audioRef.current.play();
+        sessionStorage.setItem("audioPlayed", "true");
+      }
+    }, 1000);
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+      clearTimeout(id);
+    };
   }, []);
 
   return (

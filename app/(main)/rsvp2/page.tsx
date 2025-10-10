@@ -218,7 +218,7 @@ export default function RSVPPage2() {
                 className="mt-6"
               >
                 <p className="text-sm font-medium text-white mb-3 font-alice">
-                  Attending the wedding*
+                  Attending the wedding(Excluding Your Information)
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   {["Yes", "No", "Maybe"].map((option) => (

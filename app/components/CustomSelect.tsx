@@ -1,55 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Dispatch, SetStateAction, useMemo, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useMemo, useState } from "react";
 
-const countryCodes = [
-  {
-    name: "India",
-    code: "+91",
-    flag: "https://cdn-icons-png.flaticon.com/512/330/330439.png",
-  },
-  {
-    name: "Singapore",
-    code: "+65",
-    flag: "https://cdn-icons-png.flaticon.com/512/299/299981.png",
-  },
-  {
-    name: "United Kingdom",
-    code: "+44",
-    flag: "https://cdn-icons-png.freepik.com/512/10948/10948404.png",
-  },
-  {
-    name: "United States",
-    code: "+1",
-    flag: "https://cdn-icons-png.freepik.com/256/330/330459.png",
-  },
-  {
-    name: "Canada",
-    code: "+1",
-    flag: "https://cdn-icons-png.flaticon.com/512/197/197430.png",
-  },
-  {
-    name: "Australia",
-    code: "+61",
-    flag: "https://cdn-icons-png.flaticon.com/512/323/323367.png",
-  },
-  {
-    name: "Germany",
-    code: "+49",
-    flag: "https://cdn-icons-png.flaticon.com/512/3909/3909219.png",
-  },
-  {
-    name: "France",
-    code: "+33",
-    flag: "https://cdn-icons-png.freepik.com/512/10948/10948297.png",
-  },
-  {
-    name: "Japan",
-    code: "+81",
-    flag: "https://cdn-icons-png.freepik.com/512/10948/10948350.png",
-  },
-];
+import countryCodes from "@/utils/countryCodes_full";
 
 const CustomSelect = ({
   setSelectedCountryCode,
@@ -59,7 +13,7 @@ const CustomSelect = ({
   const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOpen] = useState(countryCodes[0]);
 
-  useMemo(() => {
+  useEffect(() => {
     setSelectedCountryCode(selectedOption.code);
   }, [selectedOption]);
 
@@ -75,13 +29,13 @@ const CustomSelect = ({
             src={selectedOption.flag}
             alt={selectedOption.name}
             height={20}
-            width={20}
+            width={28}
           />{" "}
           {selectedOption.code}
         </div>
         {open && (
           <div
-            className="absolute z-10 h-fit top-11 w-28 left-0 overflow-y-scroll cursor-pointer border-2 text-black bg-white border-[#BFBFBF] outline-none focus-within:border-primary
+            className="absolute z-10 h-80 top-11 w-28 left-0 overflow-y-scroll cursor-pointer border-2 text-black bg-white border-[#BFBFBF] outline-none focus-within:border-primary
           rounded-lg px-1 py-2 text-xl flex flex-col"
           >
             {countryCodes.map((country) => (
@@ -94,7 +48,7 @@ const CustomSelect = ({
                   src={country.flag}
                   alt={country.name}
                   height={20}
-                  width={20}
+                  width={28}
                 />{" "}
                 {country.code}
               </div>

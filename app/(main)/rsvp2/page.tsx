@@ -222,7 +222,7 @@ export default function RSVPPage2() {
                 className="mt-6"
               >
                 <p className="text-sm font-medium text-white mb-3 font-alice">
-                  Attending the wedding* (Excluding Your Information)
+                  Attending the wedding*
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   {["Yes", "No", "Maybe"].map((option) => (
@@ -255,7 +255,8 @@ export default function RSVPPage2() {
                 }}
               >
                 <label className="block text-white font-alice mb-2">
-                  Number of Family Members Attending*
+                  Number of Family Members Attending* (Excluding Your
+                  Information)
                 </label>
                 <input
                   type="number"

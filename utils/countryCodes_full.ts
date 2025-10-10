@@ -1,5 +1,4 @@
 const countryCodes = [
-  { name: "India", code: "+91", flag: "https://flagcdn.com/w320/in.png" },
   {
     name: "Singapore",
     code: "+65",
@@ -10,6 +9,7 @@ const countryCodes = [
     code: "+44",
     flag: "https://flagcdn.com/w320/gb.png",
   },
+  { name: "India", code: "+91", flag: "https://flagcdn.com/w320/in.png" },
   {
     name: "United States",
     code: "+1",

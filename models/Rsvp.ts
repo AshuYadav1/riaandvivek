@@ -10,6 +10,10 @@ const MemberSchema = new Schema(
       type: Number,
       require: true,
     },
+    code: {
+      type: String,
+      require: false,
+    },
     contact: {
       type: String,
       require: false,

@@ -4,17 +4,28 @@ import Image from "next/image";
 import { Dispatch, SetStateAction, useEffect, useMemo, useState } from "react";
 
 import countryCodes from "@/utils/countryCodes_full";
+import { Member } from "../(main)/rsvp2/page";
 
 const CustomSelect = ({
   setSelectedCountryCode,
+  memberIndex,
+  handleMemberChange,
 }: {
-  setSelectedCountryCode: Dispatch<SetStateAction<string>>;
+  setSelectedCountryCode?: Dispatch<SetStateAction<string>>;
+  memberIndex?: number;
+  handleMemberChange?: (
+    index: number,
+    field: keyof Member,
+    value: string
+  ) => void;
 }) => {
   const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOpen] = useState(countryCodes[0]);
 
   useEffect(() => {
-    setSelectedCountryCode(selectedOption.code);
+    if (setSelectedCountryCode) setSelectedCountryCode(selectedOption.code);
+    if (handleMemberChange)
+      handleMemberChange(memberIndex!, "code", selectedOption.code);
   }, [selectedOption]);
 
   return (
@@ -22,7 +33,7 @@ const CustomSelect = ({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="relative h-8 w-22 cursor-pointer outline-none focus-within:border-primary px-2 py-[22px] text-sm flex items-center justify-between"
+        className="relative h-8 w-22 text-white cursor-pointer outline-none focus-within:border-primary px-2 py-[22px] text-sm flex items-center justify-between"
       >
         <div className="flex gap-2">
           <Image
@@ -35,7 +46,7 @@ const CustomSelect = ({
         </div>
         {open && (
           <div
-            className="absolute z-10 h-80 top-11 w-28 left-0 overflow-y-scroll cursor-pointer border-2 text-black bg-white border-[#BFBFBF] outline-none focus-within:border-primary
+            className="absolute z-10 h-60 top-11 w-28 left-0 overflow-y-scroll cursor-pointer border-2 text-black bg-white border-[#BFBFBF] outline-none focus-within:border-primary
           rounded-lg px-1 py-2 text-xl flex flex-col"
           >
             {countryCodes.map((country) => (

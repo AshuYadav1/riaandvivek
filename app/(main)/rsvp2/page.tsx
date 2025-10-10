@@ -8,8 +8,9 @@ import axios from "axios";
 import SmartCalendarButton from "@/app/components/SmartCalendarButton";
 import CustomSelect from "@/app/components/CustomSelect";
 
-type Member = {
+export type Member = {
   name: string;
+  code: string;
   contact: string;
   age: string;
 };
@@ -37,6 +38,7 @@ export default function RSVPPage2() {
     if (num !== null && num > 0) {
       const members = Array.from({ length: num }, () => ({
         name: "",
+        code: "",
         contact: "",
         age: "",
       }));
@@ -118,7 +120,7 @@ export default function RSVPPage2() {
     );
 
   return (
-    <div className="relative bg-white min-h-screen overflow-x-hidden pt-[12%] bg-[url('/Proposal.jpg')] bg-center bg-no-repeat bg-cover">
+    <div className="relative bg-white min-h-screen overflow-x-hidden overflow-y-hidden pt-[12%] bg-[url('/Proposal.jpg')] bg-center bg-no-repeat bg-cover">
       <div className="absolute inset-0 bg-black/70"></div>
 
       <Navigation />
@@ -218,7 +220,7 @@ export default function RSVPPage2() {
                 className="mt-6"
               >
                 <p className="text-sm font-medium text-white mb-3 font-alice">
-                  Attending the wedding*
+                  Attending the wedding* (Excluding Your Information)
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   {["Yes", "No", "Maybe"].map((option) => (
@@ -281,7 +283,7 @@ export default function RSVPPage2() {
                           handleMemberChange(index, "name", e.target.value)
                         }
                         required
-                        className="flex-1 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
+                        className="flex-1 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 px-2 py-2 text-white font-alice"
                       />
                       <input
                         type="number"
@@ -291,18 +293,24 @@ export default function RSVPPage2() {
                           handleMemberChange(index, "age", e.target.value)
                         }
                         required
-                        className="w-32 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
+                        className="w-32 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 px-2 py-2 text-white font-alice"
                       />
-                      <input
-                        type="text"
-                        placeholder={`Contact no`}
-                        value={member.contact}
-                        onChange={(e) =>
-                          handleMemberChange(index, "contact", e.target.value)
-                        }
-                        required
-                        className="flex-1 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 text-white font-alice"
-                      />
+                      <div className="flex">
+                        {" "}
+                        <CustomSelect
+                          memberIndex={index}
+                          handleMemberChange={handleMemberChange}
+                        />
+                        <input
+                          type="text"
+                          placeholder={`Contact no`}
+                          value={member.contact}
+                          onChange={(e) =>
+                            handleMemberChange(index, "contact", e.target.value)
+                          }
+                          className="flex-1 bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 px-2 py-2 text-white font-alice"
+                        />
+                      </div>
                     </div>
                   ))}
               </div>

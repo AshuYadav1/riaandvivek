@@ -99,7 +99,6 @@ export default function Navigation() {
       {/* Tablet Navigation (mobile-style) */}
       <div className="hidden md:flex lg:hidden fixed inset-0 z-50 flex-col">
         <header className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-[10vh] flex items-center justify-center">
-          {/* <h1 className="title text-2xl text-amber-900">Ria & Vivek</h1> */}
           <Link href={"/"}>
             <Image
               src={"/LOGO.png"}
@@ -113,7 +112,7 @@ export default function Navigation() {
         <div className="h-[12vh]"></div>
 
         {/* Toggle Menu Button (Hamburger ↔ X) */}
-        <button
+        {/* <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           className="fixed bottom-4 left-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700 transition-all"
@@ -129,14 +128,14 @@ export default function Navigation() {
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.div>
           </AnimatePresence>
-        </button>
+        </button> */}
 
         {/* Prev page btn */}
         {prevPage && (
           <Link
             href={prevPage.href}
             aria-label="Go to previous page"
-            className="fixed bottom-4 right-20 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
+            className="fixed bottom-4 left-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
           >
             <ChevronLeft size={24} />
           </Link>
@@ -164,7 +163,7 @@ export default function Navigation() {
         </AnimatePresence>
 
         {/* Slide-up Menu */}
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {isOpen && (
             <motion.div
               initial={{ y: "100%" }}
@@ -200,13 +199,12 @@ export default function Navigation() {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
 
       {/* Mobile Navigation */}
       <div className="md:hidden">
         <header className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-amber-50/95 to-white/95 backdrop-blur-sm h-[10vh] flex items-center justify-center">
-          {/* <h1 className="title text-2xl text-amber-900">Ria & Vivek</h1> */}
           <Link href={"/"}>
             <Image
               src={"/LOGO.png"}
@@ -219,7 +217,7 @@ export default function Navigation() {
         </header>
 
         {/* Toggle Menu Button (Hamburger ↔ X) */}
-        <button
+        {/* <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           className="fixed bottom-4 left-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700 transition-all"
@@ -235,14 +233,14 @@ export default function Navigation() {
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.div>
           </AnimatePresence>
-        </button>
+        </button> */}
 
         {/* Prev page btn */}
         {prevPage && (
           <Link
             href={prevPage.href}
             aria-label="Go to previous page"
-            className="fixed bottom-4 right-18 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
+            className="fixed bottom-4 left-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700"
           >
             <ChevronLeft size={24} />
           </Link>

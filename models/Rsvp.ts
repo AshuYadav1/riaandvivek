@@ -30,6 +30,10 @@ const RsvpSchema = new Schema(
       type: String,
       require: true,
     },
+    age: {
+      type: Number,
+      require: true,
+    },
     countryCode: {
       type: String,
       require: true,

@@ -89,6 +89,7 @@ export async function POST(req: NextRequest) {
 
     const rsvp = await Rsvp.create({
       name: data.name,
+      age: data.age,
       countryCode: data.countryCode,
       contact: data.contact,
       email: data.email,

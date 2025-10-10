@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 interface RSVP {
   name: string;
+  age: number;
   countryCode: number;
   contact: number;
   email: string;
@@ -120,9 +121,12 @@ const HorizonAdminPage = () => {
           </div>
         ) : rsvps.length ? (
           <>
-            <div className="grid grid-cols-9 wrap-break-word">
+            <div className="grid grid-cols-10 wrap-break-word">
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Name
+              </p>
+              <p className="border-[1px] text-left px-2 py-1 font-semibold">
+                Age
               </p>
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Country Code
@@ -142,7 +146,7 @@ const HorizonAdminPage = () => {
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Age
               </p>
-              <p className="w-20 border-[1px] text-left px-2 py-1 font-semibold">
+              <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Country code
               </p>
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
@@ -152,9 +156,10 @@ const HorizonAdminPage = () => {
             {rsvps.map((rsvp, index) => (
               <div
                 key={rsvp.email + index}
-                className="grid grid-cols-9 wrap-break-word"
+                className="grid grid-cols-10 wrap-break-word"
               >
                 <p className="border-[1px] px-2 py-1">{rsvp.name}</p>
+                <p className="border-[1px] px-2 py-1">{rsvp.age}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.countryCode}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.contact}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.email}</p>

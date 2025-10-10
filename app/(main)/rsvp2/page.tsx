@@ -18,6 +18,7 @@ export type Member = {
 export default function RSVPPage2() {
   const [formData, setFormData] = useState({
     name: "",
+    age: "",
     countryCode: "",
     contact: "",
     email: "",
@@ -104,6 +105,7 @@ export default function RSVPPage2() {
 
   const fields = [
     { name: "name", type: "text", placeholder: "Full Name*" },
+    { name: "age", type: "number", placeholder: "Age*" },
     { name: "contact", type: "tel", placeholder: "Contact No*" },
     { name: "email", type: "email", placeholder: "Email ID*" },
   ];

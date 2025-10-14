@@ -6,6 +6,7 @@ import { GeistMono } from "geist/font/mono";
 import { Playfair_Display, Meddon } from "next/font/google"; // Import Meddon here
 import { Suspense } from "react";
 import "./globals.css";
+import AuthContextProvider from "@/contexts/AuthContext";
 
 // Meddon font configuration
 const meddon = Meddon({
@@ -65,7 +66,7 @@ export default function RootLayout({
               </div>
             }
           >
-            {children}
+            <AuthContextProvider>{children}</AuthContextProvider>
           </Suspense>
         </main>
       </body>

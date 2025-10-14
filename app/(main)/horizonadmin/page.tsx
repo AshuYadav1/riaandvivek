@@ -25,11 +25,6 @@ const HorizonAdminPage = () => {
   const [rsvps, setRsvps] = useState<RSVP[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [isAuth, setIsAuth] = useState(false);
-  const [error, setError] = useState("");
-
   const getAllRSVPs = async () => {
     try {
       setLoading(true);
@@ -46,55 +41,9 @@ const HorizonAdminPage = () => {
     }
   };
 
-  const verify = () => {
-    if (
-      username.trim() === "HorizonAdmin" &&
-      password.trim() === "HorizonAdmin@2025"
-    ) {
-      setIsAuth(true);
-    } else {
-      setError("Invalid credentials");
-
-      setTimeout(() => {
-        setError("");
-      }, 3000);
-    }
-  };
-
   useEffect(() => {
     getAllRSVPs();
   }, []);
-
-  if (!isAuth)
-    return (
-      <section className="min-h-screen w-full bg-gradient-to-r from-[#FFE8DB] to-white flex flex-col justify-center items-center">
-        <p className="text-red-500">{error && error}</p>
-        <div className="w-80 flex flex-col gap-4 ">
-          <p className="mb-4 text-3xl text-center font-alice">HorizonAdmin</p>
-          <input
-            className="px-2 py-1 rounded-sm h-10 w-full outline-none bg-gray-200 text-gray-800 placeholder:text-gray-800-600 font-mediumb-2border-blue-500 transition-all"
-            onChange={(e) => setUsername(e.target.value)}
-            value={username || ""}
-            type="text"
-            placeholder="username"
-          />
-          <input
-            className="px-2 py-1 rounded-sm h-10 w-full outline-none bg-gray-200 text-gray-80 placeholder:text-gray-80-600 font-mediub-2 dark:border-black focus:border-blue-500 transition-all"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password || ""}
-            type="text"
-            placeholder="password"
-          />
-          <button
-            onClick={() => verify()}
-            className="bg-amber-950 rounded-md text-xl text-white font-semibold py-1 active:scale-95 transition-all mt-4"
-            type="submit"
-          >
-            Sign in
-          </button>
-        </div>
-      </section>
-    );
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-[#FFE8DB] to-white relative overflow-hidden p-4">

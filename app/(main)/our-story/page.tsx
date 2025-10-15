@@ -112,13 +112,16 @@ export default function OurStoryPage() {
 
         // Optional: remove listener after first tap
         document.removeEventListener("scroll", handleUserTap);
+        document.removeEventListener("click", handleUserTap);
       }
     };
 
     document.addEventListener("scroll", handleUserTap);
+    document.addEventListener("click", handleUserTap);
 
     return () => {
       document.removeEventListener("scroll", handleUserTap);
+      document.removeEventListener("click", handleUserTap);
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current = null;

@@ -97,7 +97,7 @@ export default function OurStoryPage() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/song.mpeg");
+    audioRef.current = new Audio("/song.mp3");
 
     const handleUserTap = () => {
       if (!sessionStorage.getItem("audioPlayed") && audioRef.current) {

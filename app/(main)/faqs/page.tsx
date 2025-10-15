@@ -146,7 +146,7 @@ const faqs = [
   },
   {
     question: "Is there a specific RSVP deadline?",
-    answer: "The RSVP Deadline is 26th October",
+    answer: "The RSVP Deadline is 2nd November 2025",
   },
   {
     question: "What if I have dietary restrictions or allergies?",

@@ -19,6 +19,7 @@ const Login = ({
       password.trim() === "HorizonAdmin@2025"
     ) {
       setIsAuth(true);
+      sessionStorage.setItem("admin-auth", "true");
     } else {
       setError("Invalid credentials");
 
@@ -29,8 +30,9 @@ const Login = ({
   };
 
   const verifyUser = () => {
-    if (password.trim() === "#unstable") {
+    if (password.trim() === "#rivi") {
       setIsAuth(true);
+      sessionStorage.setItem("user-auth", "true");
     } else {
       setError("Invalid credentials");
 

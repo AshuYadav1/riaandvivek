@@ -348,7 +348,7 @@ export default function RSVPPage2() {
           <p className="mb-4">
             Kindly RSVP by{" "}
             <span className="font-semibold">
-              26<sup>th</sup> October
+              2<sup>nd</sup> Nov 2025
             </span>
           </p>
           <p className="font-alice text-gray-200">

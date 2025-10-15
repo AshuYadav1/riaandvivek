@@ -100,19 +100,8 @@ export default function OurStoryPage() {
     audioRef.current = new Audio("/song.mp3");
 
     const handleUserTap = () => {
-      if (!sessionStorage.getItem("audioPlayed") && audioRef.current) {
-        audioRef.current
-          .play()
-          .then(() => {
-            sessionStorage.setItem("audioPlayed", "true");
-          })
-          .catch((err) => {
-            console.error("Audio playback failed:", err);
-          });
-
-        // Optional: remove listener after first tap
-        document.removeEventListener("scroll", handleUserTap);
-        document.removeEventListener("click", handleUserTap);
+      if (audioRef.current) {
+        audioRef.current.play();
       }
     };
 
@@ -124,7 +113,6 @@ export default function OurStoryPage() {
       document.removeEventListener("click", handleUserTap);
       if (audioRef.current) {
         audioRef.current.pause();
-        audioRef.current = null;
       }
     };
   }, []);

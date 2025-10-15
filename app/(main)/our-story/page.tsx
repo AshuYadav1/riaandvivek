@@ -97,20 +97,32 @@ export default function OurStoryPage() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const id = setTimeout(() => {
-      if (!sessionStorage.getItem("audioPlayed")) {
-        audioRef.current = new Audio("/song.mpeg");
-        audioRef.current.play();
-        sessionStorage.setItem("audioPlayed", "true");
+    audioRef.current = new Audio("/song.mpeg");
+
+    const handleUserTap = () => {
+      if (!sessionStorage.getItem("audioPlayed") && audioRef.current) {
+        audioRef.current
+          .play()
+          .then(() => {
+            sessionStorage.setItem("audioPlayed", "true");
+          })
+          .catch((err) => {
+            console.error("Audio playback failed:", err);
+          });
+
+        // Optional: remove listener after first tap
+        document.removeEventListener("scroll", handleUserTap);
       }
-    }, 1000);
+    };
+
+    document.addEventListener("scroll", handleUserTap);
 
     return () => {
+      document.removeEventListener("scroll", handleUserTap);
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current = null;
       }
-      clearTimeout(id);
     };
   }, []);
 

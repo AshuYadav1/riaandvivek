@@ -305,7 +305,7 @@ export default function RSVPPage2() {
                           handleMemberChange={handleMemberChange}
                         />
                         <input
-                          type="text"
+                          type="number"
                           placeholder={`Contact no`}
                           value={member.contact}
                           onChange={(e) =>

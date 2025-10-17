@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navigation from "@/app/components/Navigation";
 import axios from "axios";
@@ -50,19 +50,20 @@ export default function RSVPPage2() {
   }, [numOfMembers]);
 
   // Handle individual field updates
-  const handleMemberChange = (
-    index: number,
-    field: keyof Member,
-    value: string
-  ) => {
-    if (!attendingMembers) return;
-    const updatedMembers = [...attendingMembers];
-    updatedMembers[index] = {
-      ...updatedMembers[index],
-      [field]: value,
-    };
-    setAttendingMembers(updatedMembers);
-  };
+  const handleMemberChange = useCallback(
+    (index: number, field: keyof Member, value: string) => {
+      setAttendingMembers((prevMembers) => {
+        if (!prevMembers) return prevMembers;
+        const updatedMembers = [...prevMembers];
+        updatedMembers[index] = {
+          ...updatedMembers[index],
+          [field]: value,
+        };
+        return updatedMembers;
+      });
+    },
+    []
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

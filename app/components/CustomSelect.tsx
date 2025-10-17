@@ -31,7 +31,7 @@ const CustomSelect = ({
     if (setSelectedCountryCode) setSelectedCountryCode(selectedOption.code);
     if (handleMemberChange)
       handleMemberChange(memberIndex!, "code", selectedOption.code);
-  }, [selectedOption]);
+  }, [selectedOption, memberIndex, setSelectedCountryCode, handleMemberChange]);
 
   // Handle click outside
   useEffect(() => {

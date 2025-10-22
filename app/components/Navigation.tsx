@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -112,10 +112,10 @@ export default function Navigation() {
         <div className="h-[12vh]"></div>
 
         {/* Toggle Menu Button (Hamburger ↔ X) */}
-        {/* <button
+        <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
-          className="fixed bottom-4 left-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700 transition-all"
+          className="fixed top-5 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700 transition-all"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
@@ -128,7 +128,7 @@ export default function Navigation() {
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.div>
           </AnimatePresence>
-        </button> */}
+        </button>
 
         {/* Prev page btn */}
         {prevPage && (
@@ -163,7 +163,7 @@ export default function Navigation() {
         </AnimatePresence>
 
         {/* Slide-up Menu */}
-        {/* <AnimatePresence>
+        <AnimatePresence>
           {isOpen && (
             <motion.div
               initial={{ y: "100%" }}
@@ -199,7 +199,7 @@ export default function Navigation() {
               </div>
             </motion.div>
           )}
-        </AnimatePresence> */}
+        </AnimatePresence>
       </div>
 
       {/* Mobile Navigation */}
@@ -217,10 +217,10 @@ export default function Navigation() {
         </header>
 
         {/* Toggle Menu Button (Hamburger ↔ X) */}
-        {/* <button
+        <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
-          className="fixed bottom-4 left-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700 transition-all"
+          className="fixed top-5 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg text-amber-700 transition-all"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
@@ -233,7 +233,7 @@ export default function Navigation() {
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.div>
           </AnimatePresence>
-        </button> */}
+        </button>
 
         {/* Prev page btn */}
         {prevPage && (

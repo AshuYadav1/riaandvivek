@@ -38,7 +38,7 @@ const EventsPage = () => {
           <section className="flex flex-col gap-4 pt-2">
             <div className="flex items-center justify-center w-full">
               <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] mr-4"></div>
-              <h2 className="text-center font-english text-4xl rounded-b-2xl text-[#c4a882] py-2">
+              <h2 className="text-center font-alice text-4xl rounded-b-2xl text-[#c4a882] py-2">
                 5 <sup>th</sup> March
               </h2>
               <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] ml-4"></div>
@@ -75,7 +75,7 @@ const EventsPage = () => {
           <section className="flex flex-col gap-4 pt-2">
             <div className="flex items-center justify-center w-full">
               <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] mr-4"></div>
-              <h2 className="text-center font-english text-4xl rounded-b-2xl py-2 text-[#c4a882]">
+              <h2 className="text-center font-alice text-4xl rounded-b-2xl py-2 text-[#c4a882]">
                 6 <sup>th</sup> March
               </h2>
               <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] ml-4"></div>
@@ -148,7 +148,7 @@ const EventsPage = () => {
           <section className="flex flex-col gap-4 mb-6">
             <div className="flex items-center justify-center w-full">
               <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] mr-4"></div>
-              <h2 className="text-center font-english text-4xl text-[#c4a882] rounded-b-2xl py-2">
+              <h2 className="text-center font-alice text-4xl text-[#c4a882] rounded-b-2xl py-2">
                 7 <sup>th</sup> March
               </h2>
               <div className="border-t border-[#c4a882]/50 flex-grow max-w-[60px] ml-4"></div>

@@ -32,7 +32,7 @@ const EventsPage = () => {
       <Image src={white} fill alt="bg" className="absolute top-0 -z-10" />
       <div className="pt-[12%] flex justify-center">
         <div className="w-[840px] pt-10 flex flex-col px-4 sm:px-6 lg:px-8">
-          <h1 className="text-center font-english text-5xl! text-[#c4a882] underline">
+          <h1 className="text-center font-agbal text-5xl! text-[#c4a882] underline">
             Events
           </h1>
           <section className="flex flex-col gap-4 pt-2">

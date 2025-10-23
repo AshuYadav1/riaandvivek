@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Meddon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 
 /* Root variables */
 :root {
@@ -31,6 +32,16 @@
 @font-face {
   font-family: "Trajanpro";
   src: url("../public/TRAJANPRO-REGULAR.OTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Agbalumo";
+  src: url("../public/Agbalumo-Regular.ttf") format("truetype");
+  font-weight: 300;
+}
+
+.font-agbal {
+  font-family: "Agbalumo", serif;
 }
 
 .font-alice {

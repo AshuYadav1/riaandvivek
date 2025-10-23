@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Meddon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 
 /* Root variables */
 :root {
@@ -38,6 +39,16 @@
   font-family: "Agbalumo";
   src: url("../public/Agbalumo-Regular.ttf") format("truetype");
   font-weight: 300;
+}
+
+@font-face {
+  font-family: "Italiana";
+  src: url("../public/Italiana-Regular.ttf") format("truetype");
+  font-weight: 300;
+}
+
+.font-Italiana {
+  font-family: "Italiana", serif;
 }
 
 .font-agbal {

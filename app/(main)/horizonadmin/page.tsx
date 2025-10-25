@@ -1,9 +1,10 @@
 "use client";
 
+import { exportToExcel } from "@/utils/exportToExcel";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-interface RSVP {
+export interface RSVP {
   name: string;
   age: number;
   countryCode: number;
@@ -11,14 +12,12 @@ interface RSVP {
   email: string;
   attending: "Yes" | "No" | "Maybe";
   members: number;
-  familyDetails: [
-    {
-      name: string;
-      age: number;
-      code: string;
-      contact?: number;
-    }
-  ];
+  familyDetails: {
+    name: string;
+    age: number;
+    code: string;
+    contact?: number;
+  }[];
 }
 
 const HorizonAdminPage = () => {
@@ -159,6 +158,12 @@ const HorizonAdminPage = () => {
                 </div>
               </div>
             ))}
+            <button
+              onClick={() => exportToExcel(rsvps, "Wedding-attendance.xlsx")}
+              className="float-right px-6 py-2 bg-emerald-600 font-medium cursor-pointer active:scale-95 transition-transform rounded-2xl text-xl text-white mt-6"
+            >
+              Export to excel
+            </button>
           </>
         ) : (
           <div>No RSVPs yet</div>

@@ -11,7 +11,6 @@ export const exportToExcel = async (
   const workbook = new ExcelJS.Workbook();
   const worksheet = workbook.addWorksheet("Attendees");
 
-  // 🧾 Define columns
   worksheet.columns = [
     { header: "Name", key: "name", width: 40 },
     { header: "Age", key: "age", width: 10 },

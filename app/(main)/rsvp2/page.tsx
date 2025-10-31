@@ -262,7 +262,7 @@ export default function RSVPPage2() {
                 <input
                   type="number"
                   name="members"
-                  min={1}
+                  min={0}
                   max={10}
                   value={numOfMembers}
                   onChange={(e) => setNumOfMember(e.target.value)}

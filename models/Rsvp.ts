@@ -55,6 +55,11 @@ const RsvpSchema = new Schema(
       enum: ["Yes", "No", "Maybe"],
       require: true,
     },
+    team: {
+      type: String,
+      enum: ["Groom", "Bride"],
+      require: true,
+    },
   },
   {
     timestamps: true,

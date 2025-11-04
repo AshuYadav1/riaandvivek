@@ -94,6 +94,7 @@ export async function POST(req: NextRequest) {
       contact: data.contact,
       email: data.email,
       attending: data.attending,
+      team: data.team,
       members: data.members,
       familyDetails: data.familyDetails,
     });

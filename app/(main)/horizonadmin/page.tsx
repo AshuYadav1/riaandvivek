@@ -11,6 +11,7 @@ export interface RSVP {
   contact: number;
   email: string;
   attending: "Yes" | "No" | "Maybe";
+  team: "Groom" | "Bride";
   members: number;
   familyDetails: {
     name: string;
@@ -69,7 +70,7 @@ const HorizonAdminPage = () => {
           </div>
         ) : rsvps.length ? (
           <>
-            <div className="grid grid-cols-10 wrap-break-word">
+            <div className="grid grid-cols-11 wrap-break-word">
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Name
               </p>
@@ -89,6 +90,9 @@ const HorizonAdminPage = () => {
                 Attending
               </p>
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
+                Team
+              </p>
+              <p className="border-[1px] text-left px-2 py-1 font-semibold">
                 Members
               </p>
               <p className="border-[1px] text-left px-2 py-1 font-semibold">
@@ -104,7 +108,7 @@ const HorizonAdminPage = () => {
             {rsvps.map((rsvp, index) => (
               <div
                 key={rsvp.email + index}
-                className="grid grid-cols-10 wrap-break-word"
+                className="grid grid-cols-11 wrap-break-word"
               >
                 <p className="border-[1px] px-2 py-1">{rsvp.name}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.age}</p>
@@ -112,6 +116,7 @@ const HorizonAdminPage = () => {
                 <p className="border-[1px] px-2 py-1">{rsvp.contact}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.email}</p>
                 <p className="border-[1px] px-2 py-1">{rsvp.attending}</p>
+                <p className="border-[1px] px-2 py-1">{rsvp.team}</p>
                 <div className="grid grid-cols-1">
                   {rsvp.familyDetails &&
                     rsvp.familyDetails.map((member, i) => (

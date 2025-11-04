@@ -23,6 +23,7 @@ export default function RSVPPage2() {
     contact: "",
     email: "",
     attending: "",
+    team: "",
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -236,6 +237,39 @@ export default function RSVPPage2() {
                         name="attending"
                         value={option}
                         checked={formData.attending === option}
+                        onChange={handleChange}
+                        className="text-white focus:ring-2 focus:ring-[#d6c7a1]"
+                        required
+                      />
+                      <span className="ml-2 text-white font-alice">
+                        {option}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, x: -100 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="mt-6"
+              >
+                <p className="text-sm font-medium text-white mb-3 font-alice">
+                  Choose Team *
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  {["Groom", "Bride"].map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        name="team"
+                        value={option}
+                        checked={formData.team === option}
                         onChange={handleChange}
                         className="text-white focus:ring-2 focus:ring-[#d6c7a1]"
                         required

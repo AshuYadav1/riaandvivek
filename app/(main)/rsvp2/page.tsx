@@ -257,7 +257,7 @@ export default function RSVPPage2() {
                 className="mt-6"
               >
                 <p className="text-sm font-medium text-white mb-3 font-alice">
-                  Choose Team *
+                  
                 </p>
                 <div className="flex gap-3 sm:gap-4">
                   {["Groom", "Bride"].map((option) => (

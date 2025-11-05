@@ -260,7 +260,7 @@ export default function RSVPPage2() {
                   
                 </p>
                 <div className="flex gap-3 sm:gap-4">
-                  {["Groom", "Bride"].map((option) => (
+                  {["Team Groom", "Team Bride"].map((option) => (
                     <label
                       key={option}
                       className="flex items-center cursor-pointer"

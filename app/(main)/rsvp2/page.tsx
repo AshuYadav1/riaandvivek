@@ -197,7 +197,7 @@ export default function RSVPPage2() {
                           onChange={handleChange}
                           placeholder={field.placeholder}
                           required
-                          className="px-2 w-full bg-transparent border-none border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
+                          className="px-2 w-full bg-transparent border-b-2 border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
                         />
                       </div>
                     ) : (
@@ -208,7 +208,7 @@ export default function RSVPPage2() {
                         onChange={handleChange}
                         placeholder={field.placeholder}
                         required
-                        className="px-2 w-full bg-transparent border-none border-b-2 border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
+                        className="px-2 w-full bg-transparent border-b-2 border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
                       />
                     )}
                   </motion.div>

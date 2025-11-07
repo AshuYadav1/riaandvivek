@@ -4,6 +4,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 
+@theme {
+  --animate-slide-in: slide-in 0.8s ease-out forwards;
+  --color-primary: #ffd008;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+}
+
 /* Root variables */
 :root {
   --background: #ffe8db;

@@ -197,7 +197,7 @@ export default function RSVPPage2() {
                           onChange={handleChange}
                           placeholder={field.placeholder}
                           required
-                          className="px-2 w-full bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
+                          className="px-2 w-full bg-transparent border-none border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
                         />
                       </div>
                     ) : (
@@ -208,7 +208,7 @@ export default function RSVPPage2() {
                         onChange={handleChange}
                         placeholder={field.placeholder}
                         required
-                        className="px-2 w-full bg-transparent border-0 border-b border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
+                        className="px-2 w-full bg-transparent border-none border-b-2 border-[#d6c7a1] focus:ring-2 focus:ring-[#d6c7a1] placeholder-gray-200 py-2 sm:py-3 text-white font-alice"
                       />
                     )}
                   </motion.div>
@@ -256,11 +256,9 @@ export default function RSVPPage2() {
                 }}
                 className="mt-6"
               >
-                <p className="text-sm font-medium text-white mb-3 font-alice">
-                  
-                </p>
+                <p className="text-sm font-medium text-white mb-3 font-alice"></p>
                 <div className="flex gap-3 sm:gap-4">
-                  {["Team Groom", "Team Bride"].map((option) => (
+                  {["Groom", "Bride"].map((option) => (
                     <label
                       key={option}
                       className="flex items-center cursor-pointer"
@@ -275,7 +273,7 @@ export default function RSVPPage2() {
                         required
                       />
                       <span className="ml-2 text-white font-alice">
-                        {option}
+                        {`Team ${option}`}
                       </span>
                     </label>
                   ))}

@@ -77,19 +77,24 @@ export default function RSVPPage2() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const data = {
+    const reqBody = {
       ...formData,
       countryCode: selectedCountryCode,
       members: numOfMembers,
       familyDetails: attendingMembers,
     };
 
-    console.log(data);
+    console.log(reqBody);
 
     try {
       setLoading(true);
-      await axios.post(`/api/rsvps`, data);
+      await axios.post(`/api/rsvps`, reqBody);
       setSuccess(true);
+
+      await axios.post("/api/send-email", {
+        guestName: formData.name,
+        guestEmail: formData.email,
+      });
     } catch (error) {
       console.error(error);
     } finally {

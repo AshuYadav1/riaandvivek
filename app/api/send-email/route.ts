@@ -33,7 +33,11 @@ export async function POST(req: Request) {
               📞 <strong>+91 97691 09082</strong><br />
               📧 <a href="mailto:riawedsvivek@gmail.com" style="color: #2563eb;">riawedsvivek@gmail.com</a>
             </p>
-            <p style="margin-top: 30px;">With love and excitement,<br/> <strong>Ria & Vivek</strong><br/> Nagpal & Gandhi Families</p>
+            <p style="margin-top: 30px;">
+            With love and excitement,<br/> 
+            <strong>Ria & Vivek</strong><br/>
+            <strong>Nagpal & Gandhi Families</strong>
+            </p>
           </div>
           <p style="text-align: center; font-size: 12px; color: #888; margin-top: 20px;">
             © 2025 Ria & Vivek Wedding Celebration

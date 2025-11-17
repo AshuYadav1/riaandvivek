@@ -16,6 +16,11 @@ const countryCodes = [
     flag: "https://flagcdn.com/w320/us.png",
   },
   {
+    name: "South Korea",
+    code: "+82",
+    flag: "https://flagcdn.com/w320/kr.png",
+  },
+  {
     name: "Afghanistan",
     code: "+93",
     flag: "https://flagcdn.com/w320/af.png",

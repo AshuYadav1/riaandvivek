@@ -11,6 +11,7 @@ const navigationItems = [
   { name: "WELCOME", href: "/welcome" },
   { name: "EVENTS", href: "/events" },
   { name: "RiViSP", href: "/rsvp2" },
+  { name: "WARDROBE", href: "/wardrobe" },
   { name: "OUR STORY", href: "/our-story" },
   { name: "FAQs", href: "/faqs" },
 ];
